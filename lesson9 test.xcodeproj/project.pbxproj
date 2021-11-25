@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD08B3EE274FA6F80054756F /* tukuru1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */; };
 		BDB6A18B274C975A00E8EFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A18A274C975A00E8EFC3 /* AppDelegate.swift */; };
 		BDB6A18D274C975A00E8EFC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A18C274C975A00E8EFC3 /* SceneDelegate.swift */; };
 		BDB6A18F274C975A00E8EFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A18E274C975A00E8EFC3 /* ViewController.swift */; };
 		BDB6A192274C975A00E8EFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6A190274C975A00E8EFC3 /* Main.storyboard */; };
 		BDB6A194274C975A00E8EFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB6A193274C975A00E8EFC3 /* Assets.xcassets */; };
 		BDB6A197274C975A00E8EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6A195274C975A00E8EFC3 /* LaunchScreen.storyboard */; };
+		BDB6A1A3274CA35D00E8EFC3 /* redViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1A2274CA35D00E8EFC3 /* redViewController.swift */; };
+		BDB6A1A5274CAB3D00E8EFC3 /* blueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1A4274CAB3D00E8EFC3 /* blueViewController.swift */; };
+		BDB6A1A7274CC71400E8EFC3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1A6274CC71400E8EFC3 /* FirstViewController.swift */; };
+		BDB6A1A9274CD80600E8EFC3 /* greenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1A8274CD80600E8EFC3 /* greenViewController.swift */; };
+		BDB6A1CB274CEB4E00E8EFC3 /* zyunbanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1CA274CEB4E00E8EFC3 /* zyunbanViewController.swift */; };
+		BDB6A1CD274CED2C00E8EFC3 /* tukuruViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A1CC274CED2C00E8EFC3 /* tukuruViewController.swift */; };
+		BDF89741274E795C00A05409 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF89740274E795C00A05409 /* CheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tukuru1ViewController.swift; sourceTree = "<group>"; };
 		BDB6A187274C975A00E8EFC3 /* lesson9 test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lesson9 test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB6A18A274C975A00E8EFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB6A18C274C975A00E8EFC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		BDB6A193274C975A00E8EFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB6A196274C975A00E8EFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDB6A198274C975A00E8EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB6A1A2274CA35D00E8EFC3 /* redViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redViewController.swift; sourceTree = "<group>"; };
+		BDB6A1A4274CAB3D00E8EFC3 /* blueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blueViewController.swift; sourceTree = "<group>"; };
+		BDB6A1A6274CC71400E8EFC3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		BDB6A1A8274CD80600E8EFC3 /* greenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greenViewController.swift; sourceTree = "<group>"; };
+		BDB6A1CA274CEB4E00E8EFC3 /* zyunbanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zyunbanViewController.swift; sourceTree = "<group>"; };
+		BDB6A1CC274CED2C00E8EFC3 /* tukuruViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tukuruViewController.swift; sourceTree = "<group>"; };
+		BDF89740274E795C00A05409 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,14 @@
 				BDB6A18A274C975A00E8EFC3 /* AppDelegate.swift */,
 				BDB6A18C274C975A00E8EFC3 /* SceneDelegate.swift */,
 				BDB6A18E274C975A00E8EFC3 /* ViewController.swift */,
+				BDB6A1A2274CA35D00E8EFC3 /* redViewController.swift */,
+				BDB6A1A4274CAB3D00E8EFC3 /* blueViewController.swift */,
+				BDB6A1CA274CEB4E00E8EFC3 /* zyunbanViewController.swift */,
+				BDB6A1A8274CD80600E8EFC3 /* greenViewController.swift */,
+				BDF89740274E795C00A05409 /* CheckBox.swift */,
+				BDB6A1A6274CC71400E8EFC3 /* FirstViewController.swift */,
+				BDB6A1CC274CED2C00E8EFC3 /* tukuruViewController.swift */,
+				BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */,
 				BDB6A190274C975A00E8EFC3 /* Main.storyboard */,
 				BDB6A193274C975A00E8EFC3 /* Assets.xcassets */,
 				BDB6A195274C975A00E8EFC3 /* LaunchScreen.storyboard */,
@@ -137,9 +161,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB6A1A3274CA35D00E8EFC3 /* redViewController.swift in Sources */,
+				BDB6A1A5274CAB3D00E8EFC3 /* blueViewController.swift in Sources */,
 				BDB6A18F274C975A00E8EFC3 /* ViewController.swift in Sources */,
+				BDB6A1A7274CC71400E8EFC3 /* FirstViewController.swift in Sources */,
+				BD08B3EE274FA6F80054756F /* tukuru1ViewController.swift in Sources */,
+				BDF89741274E795C00A05409 /* CheckBox.swift in Sources */,
+				BDB6A1CB274CEB4E00E8EFC3 /* zyunbanViewController.swift in Sources */,
 				BDB6A18B274C975A00E8EFC3 /* AppDelegate.swift in Sources */,
+				BDB6A1CD274CED2C00E8EFC3 /* tukuruViewController.swift in Sources */,
 				BDB6A18D274C975A00E8EFC3 /* SceneDelegate.swift in Sources */,
+				BDB6A1A9274CD80600E8EFC3 /* greenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
