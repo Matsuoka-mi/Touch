@@ -13,6 +13,20 @@ class zyunbanViewController: UIViewController {
     
     @IBOutlet weak var checkView: CheckBox!
   
+    @IBAction func zyunmodoru(_ sender: UIButton) {
+        // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+         
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+         
+                // ③画面遷移
+                self.present(nextView, animated: true, completion: nil)
+        
+    }
+    
+    
+    
     ///////////////////ここから////////////////
     @IBAction func checkView(_ sender: CheckBox) {
         print(sender.isChecked = true
@@ -42,6 +56,10 @@ class zyunbanViewController: UIViewController {
      
             
         }
+        
+        
+        
+        
         // Do any additional setup after loading the view.
         
       

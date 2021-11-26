@@ -10,6 +10,8 @@ import UIKit
 
 class redViewController: UIViewController {
 
+    var redgazo: Int = 0
+    
     @IBOutlet weak var imageView: UIImageView!
    //imageViewの上にTapGestureRecognizerを追加。storyboardの一番右の黄色いまるからコントロールを押しながら移動したい画面へドラッグ。できた矢印をクリックした状態で右カラムのIdentifierに好きな名前をつける。
     //TapGestureRecognizerのアイコンとソースコードをコントロールを押しながら接続し「Action」で名前をつけて下記のように記入すると、画像をタップで画面遷移できる。
@@ -29,9 +31,24 @@ class redViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: "red")
+    //    imageView.image = UIImage(named: "red")
+        //gazo の変数の中にcase ごとに１や２などの時の処理とそれ以外の時の処理を書いている
+        
+        switch self.redgazo{
+        case 1 :
+            imageView.image = UIImage(named: "black")
+     
+            
+        case 2 :
+            imageView.image = UIImage(named: "white")
+     
+            
+            
+        default:
+            imageView.image = UIImage(named: "red")
         
        
+        }
         
         // ピンチを定義
                //let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(PinchCodeViewController.pinchView(_:)))  //Swift2.2以前

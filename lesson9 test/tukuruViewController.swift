@@ -72,15 +72,15 @@ class tukuruViewController: UIViewController {
    
     
     @IBAction func modoru(_ sender: UIButton) {
-        //画面遷移
-        // ①storyboardのインスタンス取得
-                let storyboard: UIStoryboard = self.storyboard!
-         
-                // ②遷移先ViewControllerのインスタンス取得
-                let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-         
-                // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
+        //画面遷移////////////////////////////
+        //色の値を渡す
+        let View = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            View.ViewControllergazo = self.gazou
+        self.present(View, animated: true, completion: nil)    //遷移の実行
+        sender.isSelected = !sender.isSelected;
+        //画面遷移////////////////////////////
+        
+      
     }
     
     

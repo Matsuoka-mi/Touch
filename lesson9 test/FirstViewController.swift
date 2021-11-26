@@ -9,6 +9,9 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    var Firstgazo: Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,18 +41,12 @@ class FirstViewController: UIViewController {
     @objc func tapSingle(sender: UITapGestureRecognizer) {
         print("single")
         
-      
-        //画面遷移
-        // ①storyboardのインスタンス取得
-                let storyboard: UIStoryboard = self.storyboard!
-         
-                // ②遷移先ViewControllerのインスタンス取得
-                let nextView = storyboard.instantiateViewController(withIdentifier: "redViewController") as! redViewController
-         
-                // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
-        
-
+        //画面遷移////////////////////////////
+        let redView = self.storyboard?.instantiateViewController(withIdentifier: "redViewController") as! redViewController
+            redView.redgazo = self.Firstgazo
+            self.present(redView, animated: true, completion: nil)    //遷移の実行
+           
+        //画面遷移////////////////////////////
         
         
     }

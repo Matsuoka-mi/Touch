@@ -31,33 +31,18 @@ class tukuru1ViewController: UIViewController {
     
     @IBAction func modoru(_ sender: UIButton) {
         
-       
-        //画面遷移
-        // ①storyboardのインスタンス取得
-                let storyboard: UIStoryboard = self.storyboard!
-         
-                // ②遷移先ViewControllerのインスタンス取得
-                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuruViewController") as! tukuruViewController
-         
-                // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
-        sender.isSelected = !sender.isSelected;
-        
+        //画面遷移////////////////////////////
         //色の値（gazo)をtukuruに渡す
         let tukuruView = self.storyboard?.instantiateViewController(withIdentifier: "tukuruViewController") as! tukuruViewController
             tukuruView.gazou = self.gazo
-           self.navigationController?.pushViewController(tukuruView, animated: true)
-       
+        self.present(tukuruView, animated: true, completion: nil)    //遷移の実行
+        sender.isSelected = !sender.isSelected;
+        //画面遷移////////////////////////////
+        
         print("tukuruの\(tukuruView.gazou)")
         print("tukuru1の\(self.gazo)")
         
-        //色の値（gazo)をzyunbanに渡す
-        let zyunbanView = self.storyboard?.instantiateViewController(withIdentifier: "zyunbanViewController") as! zyunbanViewController
-            zyunbanView.gazouzyun = self.gazo
-           self.navigationController?.pushViewController(zyunbanView, animated: true)
-       
-        print("zyunbanの\(zyunbanView.gazouzyun)")
-        print("tukuru1の\(self.gazo)")
+      
         
         
         
