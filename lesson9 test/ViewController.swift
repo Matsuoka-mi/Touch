@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  lesson9 test
+//  lesson9 test/Users/bookmac/Desktop/Tech/iphone/lesson9/lesson9 test11_24/lesson9 test/ViewController.swift
 //
 //  Created by book mac on 2021/11/23.
 //
@@ -15,7 +15,11 @@ class ViewController: UIViewController {
        
         //画面遷移////////////////////////////
         let FirstView = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-            FirstView.Firstgazo = self.ViewControllergazo
+        //    FirstView.Firstgazo = self.ViewControllergazo
+        FirstView.Firstgazo = UserDefaults.standard.integer(forKey: "iro1")
+        
+        
+        
             self.present(FirstView, animated: true, completion: nil)    //遷移の実行
             sender.isSelected = !sender.isSelected;
         //画面遷移////////////////////////////

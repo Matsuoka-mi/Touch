@@ -91,6 +91,12 @@
                                     <action selector="zyunmodoru:" destination="N2C-Me-wU1" eventType="touchUpInside" id="T8S-9x-oGz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHS-F9-KKZ">
+                                <rect key="frame" x="86" y="158" width="24" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ed8-5N-S31"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

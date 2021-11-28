@@ -9,6 +9,9 @@ import UIKit
 
 class zyunbanViewController: UIViewController {
     
+    //forkey
+    let userDefaults:UserDefaults = UserDefaults.standard
+    
     @IBOutlet weak var zyunimageViwe1: UIImageView!
     
     @IBOutlet weak var checkView: CheckBox!
@@ -29,8 +32,7 @@ class zyunbanViewController: UIViewController {
     
     ///////////////////ここから////////////////
     @IBAction func checkView(_ sender: CheckBox) {
-        print(sender.isChecked = true
-            )
+        print(sender.isChecked)
         
     }
   
@@ -39,9 +41,30 @@ class zyunbanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
+       
+    }
+        
+        
+    
+    //forkey
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            
+            //アプリを再起動してもiro1の色を表示する
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            iroNumber = userDefaults.integer(forKey: "iro1")
+            self.gazouzyun = iroNumber
+            print("zyunbanのiroNumberは\(iroNumber)")
+            
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            
+            
         //gazouzyun の変数の中にcase ごとに１や２などの時の処理とそれ以外の時の処理を書いている
         
-        switch self.gazouzyun{
+        switch iroNumber{
         case 1 :
             zyunimageViwe1.image = UIImage(named: "black")
      
@@ -56,7 +79,6 @@ class zyunbanViewController: UIViewController {
      
             
         }
-        
         
         
         
