@@ -44,7 +44,13 @@ class FirstViewController: UIViewController {
         //画面遷移////////////////////////////
         let redView = self.storyboard?.instantiateViewController(withIdentifier: "redViewController") as! redViewController
             redView.redgazo = self.Firstgazo
-            self.present(redView, animated: true, completion: nil)    //遷移の実行
+        
+    
+        let vc = redView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+ //           self.present(redView, animated: true, completion: nil)    //遷移の実行
            
         //画面遷移////////////////////////////
         

@@ -19,8 +19,12 @@ class ViewController: UIViewController {
         FirstView.Firstgazo = UserDefaults.standard.integer(forKey: "iro1")
         
         
+        // 遷移方法にフルスクリーンを指定
+        let vc = FirstView
+        vc.modalPresentationStyle = .fullScreen
+   //self.present(FirstView, animated: true, completion: nil)    //遷移の実行
+        self.present(vc, animated: true, completion: nil)
         
-            self.present(FirstView, animated: true, completion: nil)    //遷移の実行
             sender.isSelected = !sender.isSelected;
         //画面遷移////////////////////////////
         
@@ -30,7 +34,16 @@ class ViewController: UIViewController {
         //色の値を渡す
         let zyunView = self.storyboard?.instantiateViewController(withIdentifier: "zyunbanViewController") as! zyunbanViewController
             zyunView.gazouzyun = self.ViewControllergazo
-        self.present(zyunView, animated: true, completion: nil)    //遷移の実行
+        
+        
+        // 遷移方法にフルスクリーンを指定
+        let vc = zyunView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+            sender.isSelected = !sender.isSelected;
+        
+     //   self.present(zyunView, animated: true, completion: nil)    //遷移の実行
         sender.isSelected = !sender.isSelected;
         
     }
@@ -43,7 +56,15 @@ class ViewController: UIViewController {
                 let nextView = storyboard.instantiateViewController(withIdentifier: "tukuruViewController") as! tukuruViewController
          
                 // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
+        // 遷移方法にフルスクリーンを指定
+        let vc = nextView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+            sender.isSelected = !sender.isSelected;
+        
+        
+           //     self.present(nextView, animated: true, completion: nil)
     }
     
     

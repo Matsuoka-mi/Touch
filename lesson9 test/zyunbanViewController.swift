@@ -15,6 +15,9 @@ class zyunbanViewController: UIViewController {
     @IBOutlet weak var zyunimageViwe1: UIImageView!
     
     @IBOutlet weak var checkView: CheckBox!
+    
+    @IBOutlet weak var kidoView: kido!
+    
   
     @IBAction func zyunmodoru(_ sender: UIButton) {
         // ①storyboardのインスタンス取得
@@ -24,7 +27,13 @@ class zyunbanViewController: UIViewController {
                 let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
          
                 // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
+        let vc = nextView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+            sender.isSelected = !sender.isSelected;
+        
+       //         self.present(nextView, animated: true, completion: nil)
         
     }
     
@@ -33,9 +42,22 @@ class zyunbanViewController: UIViewController {
     ///////////////////ここから////////////////
     @IBAction func checkView(_ sender: CheckBox) {
         print(sender.isChecked)
+  //      if sender.tag == 0{
+            
+ //       }
         
     }
-  
+    
+    //kidoを調整するしない
+    @IBAction func kidoView(_ sender: kido) {
+        print(sender.kidoUMU)
+        if sender.tag == 1{
+                  
+              }
+        
+        
+    }
+    
     var gazouzyun:Int = 0
     
     override func viewDidLoad() {

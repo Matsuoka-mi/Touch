@@ -32,7 +32,10 @@ class greenViewController: UIViewController {
                 let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
          
                 // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
+        // 遷移方法にフルスクリーンを指定
+        let vc = nextView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
         
        
              

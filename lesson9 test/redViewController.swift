@@ -24,7 +24,12 @@ class redViewController: UIViewController {
                 let nextView = storyboard.instantiateViewController(withIdentifier: "blueViewController") as! blueViewController
          
                 // ③画面遷移
-                self.present(nextView, animated: true, completion: nil)
+      
+        // 遷移方法にフルスクリーンを指定
+        let vc = nextView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        //self.present(nextView, animated: true, completion: nil)
            
             }
             

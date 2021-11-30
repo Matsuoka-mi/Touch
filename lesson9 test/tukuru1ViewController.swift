@@ -9,6 +9,8 @@ import UIKit
 
 //forkey
 var iroNumber: Int = 0
+var iroNumber2: Int = 0
+var iroNumber3: Int = 0
 
 class tukuru1ViewController: UIViewController {
     
@@ -20,14 +22,13 @@ class tukuru1ViewController: UIViewController {
     
     //  let defaults = NSUserDefaults.resetStandardUserDefaults()
     
-    
-    
     @IBOutlet weak var imageViewtukuru1: UIImageView!
     @IBAction func blackAction(_ sender: UIButton) {
         
         self.gazo = 1
         iroNumber = self.gazo                                       //iroNumberが１
-        userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
+ /////////////////////////////////////////
+ //       userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
         
         imageViewtukuru1.image = UIImage(named: "black")            //画像を黒くする
         print(self.gazo)
@@ -37,7 +38,7 @@ class tukuru1ViewController: UIViewController {
         self.gazo = 2
         iroNumber = self.gazo                                       //iroNumberが2
         print("iroNumber\(iroNumber)")
-        userDefaults.set(iroNumber , forKey: "iro1")
+ //       userDefaults.set(iroNumber , forKey: "iro1")
         
         imageViewtukuru1.image = UIImage(named: "white")
         print(self.gazo)
@@ -48,7 +49,7 @@ class tukuru1ViewController: UIViewController {
     @IBAction func redAction(_ sender: UIButton) {
         self.gazo = 3
         iroNumber = self.gazo                                       //iroNumberが3
-        userDefaults.set(iroNumber , forKey: "iro1")
+//        userDefaults.set(iroNumber , forKey: "iro1")
         
         imageViewtukuru1.image = UIImage(named: "red")
         
@@ -61,12 +62,20 @@ class tukuru1ViewController: UIViewController {
         
         let tukuruView = self.storyboard?.instantiateViewController(withIdentifier: "tukuruViewController") as! tukuruViewController
                 
-        //        色の値をtukuruViewControllerに渡す
-        tukuruView.gazou = UserDefaults.standard.integer(forKey: "iro1")
+        //        色の値（iroNumber)をtukuruViewControllerに渡す
+        tukuruView.gazou = self.gazo
         
+//        tukuruView.gazou = UserDefaults.standard.integer(forKey: "iro1")
         
-        self.present(tukuruView, animated: true, completion: nil)    //遷移の実行
-        sender.isSelected = !sender.isSelected;
+        //フルスクリーン
+        let vc = tukuruView
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+            sender.isSelected = !sender.isSelected;
+        
+//        self.present(tukuruView, animated: true, completion: nil)    //遷移の実行
+     
         //画面遷移////////////////////////////
         
         print("tukuruの\(tukuruView.gazou)")
@@ -86,6 +95,8 @@ class tukuru1ViewController: UIViewController {
         self.imageViewtukuru1.layer.borderColor = UIColor.blue.cgColor
         //線の太さ(太さ)
         self.imageViewtukuru1.layer.borderWidth = 3
+        
+        
     }
     
     
@@ -94,29 +105,14 @@ class tukuru1ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //新規作成の画面は常に画像なし
+        imageViewtukuru1.image = UIImage(named: "gazounashi")
         
+        iroNumber = 0                                       //iroNumberが0
+//        userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
+        print("tukuru1のiroNumber\(iroNumber)")
         
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        print("iroNumber\(iroNumber)")
-        iroNumber = userDefaults.integer(forKey: "iro1")    //iroNumber に　"iro1" を代入
-        userDefaults.synchronize()  //synchronize(即座に反映させるためのメソッド）
-        
-        
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        
-        //iroNumberの数字によって表示する色が違う
-        switch iroNumber {
-        case 1:
-            imageViewtukuru1.image = UIImage(named: "black")
-        case 2:
-            imageViewtukuru1.image = UIImage(named: "white")
-            
-            
-        default:
-            imageViewtukuru1.image = UIImage(named: "red")
-        }
+     
     }
     
     
