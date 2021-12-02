@@ -69,14 +69,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QrZ-Fo-ESG">
-                                <rect key="frame" x="10" y="30" width="100" height="100"/>
+                                <rect key="frame" x="132" y="60" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="SbP-Kw-6Wv"/>
-                                    <constraint firstAttribute="width" constant="100" id="kqu-al-tpz"/>
+                                    <constraint firstAttribute="height" constant="150" id="HmD-II-M3Y"/>
+                                    <constraint firstAttribute="width" constant="150" id="wni-uW-W4m"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="10" y="140" width="24" height="14"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="132" y="220" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -96,8 +96,42 @@
                                     <action selector="zyunmodoru:" destination="N2C-Me-wU1" eventType="touchUpInside" id="T8S-9x-oGz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHR-46-Mdk" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="86" y="162" width="24" height="16"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHR-46-Mdk" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="233" y="207.5" width="49" height="39"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" systemColor="systemGray2Color"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" image="kidoOFF">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
+                                        <color key="strokeColor" systemColor="opaqueSeparatorColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="FMe-Ke-uGg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgE-Bj-3bw">
+                                <rect key="frame" x="552" y="60" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BQc-Na-hgG"/>
+                                    <constraint firstAttribute="height" constant="150" id="Fva-XF-Lmt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-Fw-9ld" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="342" y="220" width="24" height="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
+                                        <color key="strokeColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="NEM-Bt-YJv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEa-yz-btL" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="468" y="220" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -108,32 +142,105 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="eNh-we-vk7"/>
+                                    <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="4JH-YK-eUR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-qj-jzo" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="552" y="220" width="24" height="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
+                                        <color key="strokeColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="XvT-Zw-437"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ2-b6-rgw" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
+                                <rect key="frame" x="678" y="220" width="24" height="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" systemColor="systemGray2Color"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
+                                        <color key="strokeColor" systemColor="opaqueSeparatorColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="tHt-oT-aOB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HsB-Jb-2Xd">
+                                <rect key="frame" x="342" y="60" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7e3-xB-4R7"/>
+                                    <constraint firstAttribute="width" constant="150" id="HOw-WD-oNe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-Tr-XLj">
+                                <rect key="frame" x="132" y="36" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83Z-lN-31w">
+                                <rect key="frame" x="342" y="36" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kus-yj-PvQ">
+                                <rect key="frame" x="552" y="36" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ed8-5N-S31"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="leading" secondItem="ed8-5N-S31" secondAttribute="leading" constant="10" id="0ug-Qw-P5J"/>
                             <constraint firstItem="FHR-46-Mdk" firstAttribute="centerY" secondItem="Hya-HJ-N8U" secondAttribute="centerY" id="1t6-Bo-Xch"/>
+                            <constraint firstItem="3dK-qj-jzo" firstAttribute="leading" secondItem="kgE-Bj-3bw" secondAttribute="leading" id="1tO-Zf-wde"/>
+                            <constraint firstItem="gZ2-b6-rgw" firstAttribute="trailing" secondItem="kgE-Bj-3bw" secondAttribute="trailing" id="CEm-TN-z83"/>
+                            <constraint firstItem="HsB-Jb-2Xd" firstAttribute="centerY" secondItem="QrZ-Fo-ESG" secondAttribute="centerY" id="DH0-Mf-eix"/>
                             <constraint firstItem="Hya-HJ-N8U" firstAttribute="leading" secondItem="QrZ-Fo-ESG" secondAttribute="leading" id="FaR-Pf-d4E"/>
+                            <constraint firstItem="fYB-Fw-9ld" firstAttribute="leading" secondItem="HsB-Jb-2Xd" secondAttribute="leading" id="HtD-X6-8t9"/>
                             <constraint firstItem="FHR-46-Mdk" firstAttribute="trailing" secondItem="QrZ-Fo-ESG" secondAttribute="trailing" id="IUa-XC-xQt"/>
-                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="top" secondItem="ed8-5N-S31" secondAttribute="top" constant="100" id="g0r-Su-W9u"/>
-                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="top" secondItem="ed8-5N-S31" secondAttribute="top" constant="10" id="tAd-pL-33q"/>
+                            <constraint firstItem="HsB-Jb-2Xd" firstAttribute="centerX" secondItem="mFV-g4-4aB" secondAttribute="centerX" id="KHw-6g-XNp"/>
+                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="leading" secondItem="fp3-Tr-XLj" secondAttribute="leading" id="KL8-6a-rQb"/>
+                            <constraint firstItem="3dK-qj-jzo" firstAttribute="centerY" secondItem="FHR-46-Mdk" secondAttribute="centerY" id="MD0-wq-VqN"/>
+                            <constraint firstItem="83Z-lN-31w" firstAttribute="centerY" secondItem="fp3-Tr-XLj" secondAttribute="centerY" id="N1K-eq-MdF"/>
+                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="top" secondItem="fp3-Tr-XLj" secondAttribute="bottom" constant="3" id="T5c-vg-Si6"/>
+                            <constraint firstItem="HsB-Jb-2Xd" firstAttribute="leading" secondItem="83Z-lN-31w" secondAttribute="leading" id="T7e-gG-Gic"/>
+                            <constraint firstItem="QrZ-Fo-ESG" firstAttribute="top" secondItem="ed8-5N-S31" secondAttribute="top" constant="40" id="XYQ-WF-Nam"/>
+                            <constraint firstItem="gZ2-b6-rgw" firstAttribute="centerY" secondItem="3dK-qj-jzo" secondAttribute="centerY" id="aHe-Yp-gYL"/>
+                            <constraint firstItem="gEa-yz-btL" firstAttribute="centerY" secondItem="fYB-Fw-9ld" secondAttribute="centerY" id="exj-rM-cxb"/>
+                            <constraint firstItem="kgE-Bj-3bw" firstAttribute="leading" secondItem="HsB-Jb-2Xd" secondAttribute="trailing" constant="60" id="gMT-XM-QT8"/>
+                            <constraint firstItem="HsB-Jb-2Xd" firstAttribute="leading" secondItem="QrZ-Fo-ESG" secondAttribute="trailing" constant="60" id="mfv-7Y-5b8"/>
+                            <constraint firstItem="kgE-Bj-3bw" firstAttribute="leading" secondItem="kus-yj-PvQ" secondAttribute="leading" id="rGl-7e-use"/>
+                            <constraint firstItem="gEa-yz-btL" firstAttribute="trailing" secondItem="HsB-Jb-2Xd" secondAttribute="trailing" id="rpa-gF-R31"/>
+                            <constraint firstItem="gEa-yz-btL" firstAttribute="centerY" secondItem="FHR-46-Mdk" secondAttribute="centerY" id="uf4-Gq-iyw"/>
                             <constraint firstItem="Hya-HJ-N8U" firstAttribute="top" secondItem="QrZ-Fo-ESG" secondAttribute="bottom" constant="10" id="vXk-Kn-StW"/>
+                            <constraint firstItem="kus-yj-PvQ" firstAttribute="centerY" secondItem="fp3-Tr-XLj" secondAttribute="centerY" id="wdu-JP-gLz"/>
+                            <constraint firstItem="kgE-Bj-3bw" firstAttribute="centerY" secondItem="QrZ-Fo-ESG" secondAttribute="centerY" id="yH5-UG-OIa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLo-zm-Y6n"/>
                     <connections>
                         <outlet property="checkView" destination="Hya-HJ-N8U" id="qL5-xR-EQQ"/>
-                        <outlet property="kidoView" destination="FHR-46-Mdk" id="wqJ-VS-41C"/>
-                        <outlet property="zyunimageViwe1" destination="QrZ-Fo-ESG" id="7XL-Zw-gqU"/>
+                        <outlet property="kidoView1" destination="FHR-46-Mdk" id="x2W-kr-hpI"/>
+                        <outlet property="kidoView2" destination="gEa-yz-btL" id="UNe-RL-FQz"/>
+                        <outlet property="kidoView3" destination="gZ2-b6-rgw" id="5BF-hi-ChT"/>
+                        <outlet property="zyunimageViwe1" destination="QrZ-Fo-ESG" id="swG-3b-F9L"/>
+                        <outlet property="zyunimageViwe2" destination="HsB-Jb-2Xd" id="6de-NB-HPF"/>
+                        <outlet property="zyunimageViwe3" destination="kgE-Bj-3bw" id="Eq4-m3-R1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHh-48-UQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.7971014492753632" y="980.35714285714278"/>
+            <point key="canvasLocation" x="5.755395683453238" y="979.85611510791375"/>
         </scene>
         <!--Tukuru View Controller-->
         <scene sceneID="4MF-MY-Lua">
@@ -143,7 +250,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rza-of-UsO">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rza-of-UsO">
                                 <rect key="frame" x="132" y="244" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Cj0-DK-Sp5"/>
@@ -168,15 +275,35 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-0f-zzj">
                                 <rect key="frame" x="342" y="74" width="150" height="150"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-KH-Oe6">
-                                <rect key="frame" x="342" y="240.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-KH-Oe6">
+                                <rect key="frame" x="342" y="244" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="vLd-J5-bna"/>
+                                    <constraint firstAttribute="height" constant="50" id="zYY-RX-gpq"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="minus.circle.fill" catalog="system" symbolScale="default"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="minus.circle.fill" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plusminusTap:" destination="dEk-SD-zvb" eventType="touchUpInside" id="XHR-Yj-Uyx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-Lv-2vY">
-                                <rect key="frame" x="552" y="245" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-Lv-2vY">
+                                <rect key="frame" x="552" y="244" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3JZ-te-UwX"/>
+                                    <constraint firstAttribute="width" constant="50" id="wFf-Ht-v6U"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="minus.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="plusminusTap:" destination="dEk-SD-zvb" eventType="touchUpInside" id="sUt-no-Oci"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dgj-eC-KPg">
                                 <rect key="frame" x="552" y="74" width="150" height="150"/>
@@ -246,9 +373,9 @@
                     <navigationItem key="navigationItem" id="3nC-zj-sfM"/>
                     <connections>
                         <outlet property="label" destination="NWB-3l-yXd" id="ZGA-CK-VB9"/>
-                        <outlet property="plusminus" destination="rza-of-UsO" id="aHS-sb-Slx"/>
-                        <outlet property="plusminus2" destination="mhh-Lv-2vY" id="wmj-00-nc4"/>
-                        <outlet property="plusminus3" destination="mhh-Lv-2vY" id="8Cq-Aw-7l4"/>
+                        <outlet property="plusminus1" destination="rza-of-UsO" id="PdN-ig-3dw"/>
+                        <outlet property="plusminus2" destination="NVm-KH-Oe6" id="fTZ-9O-1aF"/>
+                        <outlet property="plusminus3" destination="mhh-Lv-2vY" id="wYm-PD-xCP"/>
                         <outlet property="tukuimageView1" destination="FN5-2E-nuO" id="xHK-LG-3ir"/>
                         <outlet property="tukuimageView2" destination="nSc-0f-zzj" id="IHn-Ds-4WR"/>
                         <outlet property="tukuimageView3" destination="Dgj-eC-KPg" id="Ff6-Xt-Wu4"/>
@@ -325,19 +452,35 @@
                     <view key="view" contentMode="scaleToFill" id="UE1-9j-uJU">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-TZ-Brz">
+                                <rect key="frame" x="266" y="502.5" width="302" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="28s-zZ-V0e"/>
+                                    <constraint firstAttribute="width" constant="302" id="IBU-R0-rpm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KfG-4n-XaM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerY" secondItem="UE1-9j-uJU" secondAttribute="centerY" id="Fq0-Bc-Am0"/>
+                            <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerX" secondItem="UE1-9j-uJU" secondAttribute="centerX" id="igs-MN-Raw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eaf-m1-njA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-x5-QgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="74"/>
+            <point key="canvasLocation" x="737.41007194244605" y="73.920863309352526"/>
         </scene>
-        <!--Red View Controller-->
+        <!--View1-->
         <scene sceneID="4LU-pP-MlN">
             <objects>
-                <viewController storyboardIdentifier="redViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrF-Vk-Utr" customClass="redViewController" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrF-Vk-Utr" customClass="View1" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVV-2O-jET">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,7 +489,7 @@
                                 <rect key="frame" x="210" y="20" width="414" height="896"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="max-HQ-ILq" appends="YES" id="6hO-uP-2qQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="mYy-Fp-7PA" appends="YES" id="Boa-2d-8O2"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -361,22 +504,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="r1J-Qr-wn9"/>
                     <connections>
-                        <outlet property="imageView" destination="WY1-gc-GQW" id="KvL-dq-Cbi"/>
+                        <outlet property="view1image" destination="WY1-gc-GQW" id="gaj-uP-Ayr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpR-BH-jsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="max-HQ-ILq">
+                <tapGestureRecognizer id="mYy-Fp-7PA">
                     <connections>
-                        <action selector="Tap1:" destination="qrF-Vk-Utr" id="a9w-uu-hI3"/>
+                        <action selector="Tap1:" destination="qrF-Vk-Utr" id="1qD-0n-rFG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1529" y="74"/>
         </scene>
-        <!--Blue View Controller-->
+        <!--View2-->
         <scene sceneID="oSP-gK-8b7">
             <objects>
-                <viewController storyboardIdentifier="blueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RbO-9L-5TA" customClass="blueViewController" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RbO-9L-5TA" customClass="View2" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mog-xI-qWs">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,7 +529,7 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DXR-O4-9aw" appends="YES" id="137-Id-dRp"/>
+                                    <outletCollection property="gestureRecognizers" destination="ojS-Mx-1CC" appends="YES" id="HyX-yZ-maH"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -405,28 +548,32 @@
                     </view>
                     <navigationItem key="navigationItem" id="XWy-fb-CjL"/>
                     <connections>
-                        <outlet property="imageView2" destination="gQt-L7-Ere" id="fOX-Pm-ENq"/>
+                        <outlet property="image2View" destination="gQt-L7-Ere" id="lBD-ld-rnQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnQ-iY-7mH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="DXR-O4-9aw">
+                <tapGestureRecognizer id="ojS-Mx-1CC">
                     <connections>
-                        <action selector="Tap2:" destination="RbO-9L-5TA" id="nA0-WS-7JN"/>
+                        <action selector="Tap2:" destination="RbO-9L-5TA" id="BE6-65-0Ir"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2298.5507246376815" y="73.660714285714278"/>
         </scene>
-        <!--Green View Controller-->
+        <!--View3-->
         <scene sceneID="F7O-O8-BbX">
             <objects>
-                <viewController storyboardIdentifier="greenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVU-VB-E2C" customClass="greenViewController" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVU-VB-E2C" customClass="View3" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xM-HR-KZ9">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-Fm-f25">
-                                <rect key="frame" x="0.0" y="20" width="834" height="1112"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-Fm-f25">
+                                <rect key="frame" x="84" y="40" width="750" height="1092"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Y9k-QR-iwh" appends="YES" id="R9c-uW-uT4"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nVh-fP-zAw"/>
@@ -438,23 +585,25 @@
                             <constraint firstItem="FB3-Fm-f25" firstAttribute="top" secondItem="7xM-HR-KZ9" secondAttribute="top" id="fpR-In-KaD"/>
                             <constraint firstAttribute="bottom" secondItem="FB3-Fm-f25" secondAttribute="bottom" id="t1O-Pq-Waf"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="VF6-Bd-Dmu" appends="YES" id="dew-py-DJW"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="LQs-7B-8Oz"/>
                     <connections>
-                        <outlet property="imageView3" destination="FB3-Fm-f25" id="oYH-PI-4VA"/>
+                        <outlet property="image3View" destination="FB3-Fm-f25" id="7b9-8v-3aj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50N-oU-Ziq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VF6-Bd-Dmu"/>
+                <tapGestureRecognizer id="Y9k-QR-iwh">
+                    <connections>
+                        <action selector="Tap3:" destination="fVU-VB-E2C" id="Jdx-9h-Q4w"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3095.6521739130435" y="73.660714285714278"/>
+            <point key="canvasLocation" x="3094.9640287769785" y="73.381294964028783"/>
         </scene>
     </scenes>
     <resources>
         <image name="he" width="128" height="128"/>
+        <image name="kidoOFF" width="25" height="25"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
@@ -471,6 +620,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

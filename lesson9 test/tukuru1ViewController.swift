@@ -8,13 +8,18 @@
 import UIKit
 
 //forkey
-var iroNumber: Int = 0
+var iroNumber1: Int = 0
 var iroNumber2: Int = 0
 var iroNumber3: Int = 0
 
+
+
 class tukuru1ViewController: UIViewController {
     
-    var gazo: Int = 0
+    var gazo1: Int = 0
+    
+    var plusminustag:Int = 0
+   
     
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
@@ -24,46 +29,95 @@ class tukuru1ViewController: UIViewController {
     
     @IBOutlet weak var imageViewtukuru1: UIImageView!
     @IBAction func blackAction(_ sender: UIButton) {
-        
-        self.gazo = 1
-        iroNumber = self.gazo                                       //iroNumberが１
- /////////////////////////////////////////
- //       userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
-        
+        self.gazo1 = 1
         imageViewtukuru1.image = UIImage(named: "black")            //画像を黒くする
-        print(self.gazo)
+        
+        //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
+        switch plusminustag {
+        //1番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 1:
+            iroNumber1 = self.gazo1
+            userDefaults.set(iroNumber1 , forKey: "iro1")
+            
+        //２番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 2:
+            iroNumber2 = self.gazo1
+            userDefaults.set(iroNumber2 , forKey: "iro2")
+        
+        ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
+        default:
+            iroNumber3 = self.gazo1
+            userDefaults.set(iroNumber3 , forKey: "iro3")
+        }
+        
+        print("plusminusのたぐ\(plusminustag)")
+        print("黒を押したときのtukuru1のiroNumber\(iroNumber1)")
     }
     
     @IBAction func whiteAction(_ sender: UIButton) {
-        self.gazo = 2
-        iroNumber = self.gazo                                       //iroNumberが2
-        print("iroNumber\(iroNumber)")
- //       userDefaults.set(iroNumber , forKey: "iro1")
         
+        self.gazo1 = 2
         imageViewtukuru1.image = UIImage(named: "white")
-        print(self.gazo)
         
+        //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
+        switch plusminustag {
+        //1番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 1:
+            iroNumber1 = self.gazo1
+            userDefaults.set(iroNumber1 , forKey: "iro1")
+            
+        //２番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 2:
+            iroNumber2 = self.gazo1
+            userDefaults.set(iroNumber2 , forKey: "iro2")
         
+        ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
+        default:
+            iroNumber3 = self.gazo1
+            userDefaults.set(iroNumber3 , forKey: "iro3")
+        }
         
+        print("iroNumber\(iroNumber1)")
+        print("白を押したときのtukuru1のiroNumber\(iroNumber1)")
     }
+    
     @IBAction func redAction(_ sender: UIButton) {
-        self.gazo = 3
-        iroNumber = self.gazo                                       //iroNumberが3
-//        userDefaults.set(iroNumber , forKey: "iro1")
         
+        self.gazo1 = 3
         imageViewtukuru1.image = UIImage(named: "red")
         
-        print(self.gazo)
+        //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
+        switch plusminustag {
+        //1番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 1:
+            iroNumber1 = self.gazo1
+            userDefaults.set(iroNumber1 , forKey: "iro1")
+            
+        //２番の画像のプラスマイナスボタンが押されて遷移してきた時
+        case 2:
+            iroNumber2 = self.gazo1
+            userDefaults.set(iroNumber2 , forKey: "iro2")
+        
+        ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
+        default:
+            iroNumber3 = self.gazo1
+            userDefaults.set(iroNumber3 , forKey: "iro3")
+        }
+
+        print("赤を押したときのtukuru1のiroNumber\(iroNumber1)")
     }
     
     @IBAction func modoru(_ sender: UIButton) {
         
+       userDefaults.set(iroNumber1 , forKey: "iro1")
         //画面遷移////////////////////////////
         
         let tukuruView = self.storyboard?.instantiateViewController(withIdentifier: "tukuruViewController") as! tukuruViewController
                 
-        //        色の値（iroNumber)をtukuruViewControllerに渡す
-        tukuruView.gazou = self.gazo
+        //色の値（iroNumber)をtukuruViewControllerに渡す
+  //      tukuruView.gazou1 = iroNumber1
+  //      tukuruView.gazou2 = iroNumber2
+  //      tukuruView.gazou3 = iroNumber3
         
 //        tukuruView.gazou = UserDefaults.standard.integer(forKey: "iro1")
         
@@ -78,10 +132,8 @@ class tukuru1ViewController: UIViewController {
      
         //画面遷移////////////////////////////
         
-        print("tukuruの\(tukuruView.gazou)")
-        print("tukuru1の\(self.gazo)")
-        
-        
+       
+        print("戻るを押したときのtukuru1のiroNumber\(iroNumber1)")
         
     }
     
@@ -95,31 +147,29 @@ class tukuru1ViewController: UIViewController {
         self.imageViewtukuru1.layer.borderColor = UIColor.blue.cgColor
         //線の太さ(太さ)
         self.imageViewtukuru1.layer.borderWidth = 3
-        
+       
         
     }
     
-    
-    //forkey
     //画面遷移して戻ってきても呼び出す
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //新規作成の画面は常に画像なし
+        print("plusminusのたぐ\(plusminustag)")
+   
+     //新規作成の画面は常に画像なし
         imageViewtukuru1.image = UIImage(named: "gazounashi")
         
-        iroNumber = 0                                       //iroNumberが0
+        self.gazo1 = 0
+        //iroNumberが0
 //        userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
-        print("tukuru1のiroNumber\(iroNumber)")
+        print("tukuru1のiroNumber\(iroNumber1)")
         
      
     }
     
-    
-    
-    
-    
-    
+ 
+   
     
     
     
@@ -132,5 +182,21 @@ class tukuru1ViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+}
+
+//singleton・・・一度入れた数値が、カラーが変わってもそのままなので変えたい。
+
+class Manager {
+    
+    var memory1:Int = UserDefaults.standard.integer(forKey: "iro1")
+    var memory2:Int = UserDefaults.standard.integer(forKey: "iro2")
+    var memory3:Int = UserDefaults.standard.integer(forKey: "iro3")
+    static let shared = Manager()
+    private init() {
+    }
+
+   
+    
     
 }

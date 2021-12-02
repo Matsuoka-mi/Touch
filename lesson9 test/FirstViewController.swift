@@ -9,13 +9,17 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    var Firstgazo: Int = 0
+    //forkey
+
+    
+    var Firstgazo1: Int = 0
+    var Firstgazo2: Int = 0
+    var Firstgazo3: Int = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
         
         // ダブルタップ
             //let doubleTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapDouble(_:))) //Swift2.2以前
@@ -42,11 +46,13 @@ class FirstViewController: UIViewController {
         print("single")
         
         //画面遷移////////////////////////////
-        let redView = self.storyboard?.instantiateViewController(withIdentifier: "redViewController") as! redViewController
-            redView.redgazo = self.Firstgazo
+        let view1 = self.storyboard?.instantiateViewController(withIdentifier: "View1") as! View1
+        view1.view1gazo = self.Firstgazo1
+        view1.view2gazo = self.Firstgazo2
+        view1.view3gazo = self.Firstgazo3
         
-    
-        let vc = redView
+     
+        let vc = view1
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
         

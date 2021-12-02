@@ -9,16 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var ViewControllergazo: Int = 0
+    //forkey
+    let userDefaults:UserDefaults = UserDefaults.standard
+    
+
+    var ViewControllergazo1: Int = 0
+    var ViewControllergazo2: Int = 0
+    var ViewControllergazo3: Int = 0
     
     @IBAction func hazimeru(_ sender: UIButton) {
        
         //画面遷移////////////////////////////
         let FirstView = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-        //    FirstView.Firstgazo = self.ViewControllergazo
-        FirstView.Firstgazo = UserDefaults.standard.integer(forKey: "iro1")
+        //    FirstView.Firstgazo = self.ViewControllergazo1
+        FirstView.Firstgazo1 = UserDefaults.standard.integer(forKey: "iro1")
+        FirstView.Firstgazo2 = UserDefaults.standard.integer(forKey: "iro2")
+        FirstView.Firstgazo3 = UserDefaults.standard.integer(forKey: "iro3")
         
-        
+
         // 遷移方法にフルスクリーンを指定
         let vc = FirstView
         vc.modalPresentationStyle = .fullScreen
@@ -31,10 +39,11 @@ class ViewController: UIViewController {
     }
     @IBAction func zyunban(_ sender: UIButton) {
         
-        //色の値を渡す
+        //「じゅんび」に色の値を渡す
         let zyunView = self.storyboard?.instantiateViewController(withIdentifier: "zyunbanViewController") as! zyunbanViewController
-            zyunView.gazouzyun = self.ViewControllergazo
-        
+            zyunView.gazouzyun1 = self.ViewControllergazo1
+            zyunView.gazouzyun2 = self.ViewControllergazo2
+            zyunView.gazouzyun3 = self.ViewControllergazo3
         
         // 遷移方法にフルスクリーンを指定
         let vc = zyunView
@@ -73,6 +82,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UIScreen.main.brightness = 1    //輝度１。明るい。
+        
+        print("はじめにの画面のtag1の明るさはLED1\(UserDefaults.standard.integer(forKey: "LED1"))")
+        print("はじめにの画面のtag1の明るさはLED2\(UserDefaults.standard.integer(forKey: "LED2"))")
+        print("はじめにの画面のtag1の明るさはLED3\(UserDefaults.standard.integer(forKey: "LED3"))")
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue){

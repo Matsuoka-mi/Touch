@@ -17,9 +17,9 @@ class kido: UIButton {
     var kidoUMU: Bool = false {
         didSet{
             if kidoUMU == true {
-                self.setImage(kidoImage, for: UIControl.State.normal)
-            } else {
                 self.setImage(unkidoImage, for: UIControl.State.normal)
+            } else {
+                self.setImage(kidoImage, for: UIControl.State.normal)
             }
         }
     }
