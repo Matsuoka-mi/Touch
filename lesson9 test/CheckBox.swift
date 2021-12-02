@@ -14,9 +14,9 @@ class CheckBox: UIButton {
     let uncheckedImage = UIImage(named: "checkOFF")! as UIImage
 
     // Bool property
-    var isChecked: Bool = false {
+    var isChecked: Bool = true {
         didSet{
-            if isChecked == true {
+            if isChecked == false {
                 self.setImage(checkedImage, for: UIControl.State.normal)
             } else {
                 self.setImage(uncheckedImage, for: UIControl.State.normal)
@@ -26,7 +26,7 @@ class CheckBox: UIButton {
 
     override func awakeFromNib() {
         self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
-        self.isChecked = false
+        self.isChecked = true
     }
 
     @objc func buttonClicked(sender: UIButton) {

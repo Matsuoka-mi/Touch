@@ -14,6 +14,8 @@ class zyunbanViewController: UIViewController {
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
     
+
+    
     //forkey
     var LED1: Int = 0
     var LED2: Int = 0
@@ -23,7 +25,23 @@ class zyunbanViewController: UIViewController {
     let picture0ON = UIImage(named: "kidoON")
     let picture1OFF = UIImage(named: "kidoOFF")
     
+    let picturecheckON = UIImage(named: "checkON")
+    let picturecheckOFF = UIImage(named: "checkOFF")
+    let picturecheckmukou = UIImage(named: "checkmukou")
+    
     var kidotag:Int = 0
+    
+    var checkButtonArray = [Int]()
+
+    var tagNumber1:Int = 0
+    var tagNumber2:Int = 0
+    var tagNumber3:Int = 0
+    
+    var gazouzyun1:Int = 0
+    var gazouzyun2:Int = 0
+    var gazouzyun3:Int = 0
+    
+    var total:Int = 0
     
     @IBOutlet weak var zyunimageViwe1: UIImageView!
     @IBOutlet weak var zyunimageViwe2: UIImageView!
@@ -46,36 +64,61 @@ class zyunbanViewController: UIViewController {
     @IBOutlet weak var kidoView3: UIButton!
     
     
+    @IBOutlet weak var checkView1: UIButton!
+    @IBOutlet weak var checkView2: UIButton!
+    @IBOutlet weak var checkView3: UIButton!
+    
+    
     @IBAction func zyunmodoru(_ sender: UIButton) {
+    
+        /*  　　　　配列         */
+        //checkButtonArrayにtrue だった　tagNumber を入れる
+        
+        checkButtonArray = [Int]()
+        
+        if userDefaults.integer(forKey: "tagNumber1") == 1{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber1")]
+        }
+        
+       if userDefaults.integer(forKey: "tagNumber2") == 2{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber2")]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber3") == 3{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber3")]
+        }
+        
+        //戻るを押した時に配列を記憶させる
+        userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
+        
+        //昇順にソート
+        checkButtonArray.sort { $0 < $1 }
+        print("戻るを押した時のチェックボックス配列\(checkButtonArray)")
+        
        
-//        userDefaults.set(LED1 , forKey: "LED1")
-//        userDefaults.set(LED2 , forKey: "LED2")
-//        userDefaults.set(LED3 , forKey: "LED3")
         
-        print("戻るを押したLED1は \(userDefaults.integer(forKey: "LED1"))")
-        print("戻るを押したLED2は \(userDefaults.integer(forKey: "LED2"))")
-        print("戻るを押したLED3は \(userDefaults.integer(forKey: "LED3"))")
+        //配列の中を checkNumber に取り出す
+        //       for checkNumber in checkButtonArray {
+        //           print("checkButtonArray for文\(checkNumber)")
+        //            if checkNumber == 2{
+        //            }
+        //        }
         
+        /*  　　　ここまで　配列         */
         
         // ①storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         
         // ②遷移先ViewControllerのインスタンス取得
         let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        
-        
+     
         // ③画面遷移
         let vc = nextView
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
         
         sender.isSelected = !sender.isSelected;
-        
-//        nextView.LED1 = UserDefaults.standard.integer(forKey: "LED1")
-//        nextView.LED2 = UserDefaults.standard.integer(forKey: "LED2")
-//        nextView.LED3 = UserDefaults.standard.integer(forKey: "LED3")
-        
-        //self.present(nextView, animated: true, completion: nil)
+    
         
     }
     
@@ -83,18 +126,67 @@ class zyunbanViewController: UIViewController {
     ///////////////////ここから////////////////
     @IBAction func checkView(_ sender: CheckBox) {
         print(sender.isChecked)
-      //        if sender.tag == 0{
-      //
-      //        }
+        
+        //checkが入ればtrue 、その時 tagNumberに　tag と同じ数字を入れる
+        switch sender.tag {
+        case 1:
+            if sender.isChecked == true{
+                tagNumber1 = 1
+                userDefaults.set(sender.isChecked , forKey: "tagBool1")
+                userDefaults.set(tagNumber1 , forKey: "tagNumber1")
+                
+            }
+            else
+            {
+                tagNumber1 = 0
+                userDefaults.set(sender.isChecked , forKey: "tagBool1")
+                userDefaults.set(tagNumber1 , forKey: "tagNumber1")
+            }
+            
+            print("tagNumber1は\(self.tagNumber1)")
+            print("tagNumber1のtagBool1は\(userDefaults.bool(forKey: "tagBool1"))")
+            
+        case 2:
+            if sender.isChecked == true{
+                tagNumber2 = 2
+                userDefaults.set(sender.isChecked , forKey: "tagBool2")
+                userDefaults.set(tagNumber2 , forKey: "tagNumber2")
+            }
+            else
+            {
+                tagNumber2 = 0
+                userDefaults.set(sender.isChecked , forKey: "tagBool2")
+                userDefaults.set(tagNumber2 , forKey: "tagNumber2")
+            }
+            print("tagNumber2は\(self.tagNumber2)")
+            print("tagNumber1のtagBool2は\(userDefaults.bool(forKey: "tagBool2"))")
+            
+        default :
+            if sender.isChecked == true{
+                tagNumber3 = 3
+                userDefaults.set(sender.isChecked , forKey: "tagBool3")
+                userDefaults.set(tagNumber3 , forKey: "tagNumber3")
+                
+            }
+            else
+            {
+                tagNumber3 = 0
+                userDefaults.set(sender.isChecked , forKey: "tagBool3")
+                userDefaults.set(tagNumber3 , forKey: "tagNumber3")
+            }
+            print("tagNumber3は\(self.tagNumber3)")
+            print("tagNumber3のtagBool3は\(userDefaults.bool(forKey: "tagBool3"))")
+            
+        }
+        
         
     }
     
-    
     @IBAction func kidoView(_ sender: UIButton) {
-
-        switch sender.tag {
         
-        //1番の画像のLEDボタンが押された時 Tag1
+        switch sender.tag {
+            
+            //1番の画像のLEDボタンが押された時 Tag1
         case 1:
             //LED1 == 0 は点灯しているので、消灯させる（輝度調整ありにする）
             if self.LED1 == 0{
@@ -103,31 +195,29 @@ class zyunbanViewController: UIViewController {
                 userDefaults.set(self.LED1 , forKey: "LED1")
             }
             else{
-               //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
+                //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
                 self.LED1 = 0
                 self.kidoView1.setImage(picture0ON, for: .normal)
-               //点灯にする
+                //点灯にする
                 userDefaults.set(self.LED1 , forKey: "LED1")
             }
             
-            print("tag1を押したLED1は\(self.LED1)")
-       
+            
         case 2:
- //            //LED2 == 0 は点灯しているので、消灯させる（輝度調整ありにする）
+            //            //LED2 == 0 は点灯しているので、消灯させる（輝度調整ありにする）
             if self.LED2 == 0{
                 self.LED2 = 1
                 self.kidoView2.setImage(picture1OFF, for: .normal)
                 userDefaults.set(self.LED2 , forKey: "LED2")
+                
             }
             else{
-               //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
+                //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
                 self.LED2 = 0
                 self.kidoView2.setImage(picture0ON, for: .normal)
                 userDefaults.set(self.LED2 , forKey: "LED2")
-               //点灯にする
+                //点灯にする
             }
-            
-            print("tag1を押したLED2は\(self.LED2)")
             
         default :
             //LED3 == 0 は点灯しているので、消灯させる（輝度調整ありにする）
@@ -137,35 +227,28 @@ class zyunbanViewController: UIViewController {
                 userDefaults.set(self.LED3 , forKey: "LED3")
             }
             else{
-               //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
+                //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
                 self.LED3 = 0
                 self.kidoView3.setImage(picture0ON, for: .normal)
                 userDefaults.set(self.LED3 , forKey: "LED3")
-               //点灯にする
+                //点灯にする
             }
-            print("tag1を押したLED3は\(self.LED3)")
-                
+            
         }
         
     }
     
-            
-        
-        
-    
-    
-    var gazouzyun1:Int = 0
-    var gazouzyun2:Int = 0
-    var gazouzyun3:Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
+        
         
         if userDefaults.integer(forKey: "LED1") == 0
         {
             self.kidoView1.setImage(picture0ON, for: .normal)
         }
-        else{
+        else
+        {
             self.kidoView1.setImage(picture1OFF, for: .normal)
         }
         
@@ -173,37 +256,61 @@ class zyunbanViewController: UIViewController {
         {
             self.kidoView2.setImage(picture0ON, for: .normal)
         }
-        else{
+        else
+        {
             self.kidoView2.setImage(picture1OFF, for: .normal)
         }
+        
         
         if userDefaults.integer(forKey: "LED3") == 0
         {
             self.kidoView3.setImage(picture0ON, for: .normal)
         }
-        else{
+        else
+        {
             self.kidoView3.setImage(picture1OFF, for: .normal)
         }
+        
       
-        let manager = Manager.shared
-        print(manager.memory1)
-        print(manager.memory2)
-        print(manager.memory3)
         
-        /////
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        // imagesの初期設定(特定のファイルもしくはnilで埋める)
-        self.zyunimageViwe = [ UIImage(named: "black")!,
-                               UIImage(named: "black")!,
-                               UIImage(named: "black")!,
-        ]
-        loadImage()  // imagesの画像を表示
+        //最初の読み込みの時に　チェックボックスを前にチェックした状態にする
+        if userDefaults.bool(forKey: "tagBool1")
+        {
+            self.checkView1.setImage(picturecheckON, for: .normal)
+            tagNumber1 = 1
+        }
+        else
+        {
+            self.checkView1.setImage(picturecheckOFF, for: .normal)
+            tagNumber1 = 0
+        }
         
-        /////
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if userDefaults.bool(forKey: "tagBool2")
+        {
+            self.checkView2.setImage(picturecheckON, for: .normal)
+            tagNumber2 = 1
+        }
+        else
+        {
+            self.checkView2.setImage(picturecheckOFF, for: .normal)
+            tagNumber2 = 0
+        }
         
+        
+        if userDefaults.bool(forKey: "tagBool3")
+        {
+            self.checkView3.setImage(picturecheckON, for: .normal)
+            tagNumber3 = 1
+        }
+        else
+        {
+            self.checkView3.setImage(picturecheckOFF, for: .normal)
+            tagNumber3 = 0
+        }
+        
+            print("if直後のtagNumber3は\(userDefaults.integer(forKey: "tagNumber3"))")
+            
+         
         
         //画像１の枠線の変更
         //青にする(色)
@@ -227,36 +334,17 @@ class zyunbanViewController: UIViewController {
         
     }
     
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    private func loadImage() {
-        zyunimageViwe1.image = self.zyunimageViwe[0]
-        zyunimageViwe2.image = self.zyunimageViwe[1]
-        zyunimageViwe3.image = self.zyunimageViwe[2]
-    }
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    //forkey
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //画面を読み込んだ時に前に保存した配列を読み込む
+        checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
+       
+        print("読み込んだときのtagNumber1は\(self.tagNumber1)")
+        print("読み込んだときのtagNumber２は\(self.tagNumber2)")
+        print("読み込んだときのtagNumber３は\(self.tagNumber3)")
         
-    
-        print("zyunbiを読み込んだ(viewWillAppear)LED1は\(LED1)")
-//        self.kidotyousei1 = userDefaults.integer(forKey: "kidokioku1")
-        
-        //アプリを再起動してもkidoのアイコンをリセットしない
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        
-     
-        
-        print("forkey (viewWillAppear)LED1は \(userDefaults.integer(forKey: "LED1"))")
-        print("forkey (viewWillAppear)LED2は \(userDefaults.integer(forKey: "LED2"))")
-        print("forkey (viewWillAppear)LED3は \(userDefaults.integer(forKey: "LED3"))")
-      
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+         
         
         //アプリを再起動してもiro1の色を表示する
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -279,9 +367,6 @@ class zyunbanViewController: UIViewController {
         print("zyunbanのiroNumber3は\(iroNumber3)")
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
-        
-       
-        
         //zyunimageViewに何を表示させるか、iroNumberによって変わる
         
         switch iroNumber1{
@@ -293,7 +378,13 @@ class zyunbanViewController: UIViewController {
             zyunimageViwe1.image = UIImage(named: "red")
         default:
             zyunimageViwe1.image = UIImage(named: "gazounashi")
+          
+            self.checkView1.setImage(picturecheckmukou, for: .normal)
+            checkView1.isEnabled = false
+            
+            
         }
+        
         
         switch iroNumber2{
         case 1 :
@@ -304,6 +395,9 @@ class zyunbanViewController: UIViewController {
             zyunimageViwe2.image = UIImage(named: "red")
         default:
             zyunimageViwe2.image = UIImage(named: "gazounashi")
+            
+            self.checkView2.setImage(picturecheckmukou, for: .normal)
+            checkView2.isEnabled = false
         }
         
         switch iroNumber3{
@@ -315,23 +409,14 @@ class zyunbanViewController: UIViewController {
             zyunimageViwe3.image = UIImage(named: "red")
         default:
             zyunimageViwe3.image = UIImage(named: "gazounashi")
+            
+            self.checkView3.setImage(picturecheckmukou, for: .normal)
+            checkView3.isEnabled = false
         }
-        
-        // Do any additional setup after loading the view.
-        
+            
+            
         
     }
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

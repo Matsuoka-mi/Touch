@@ -12,6 +12,7 @@ class View3: UIViewController {
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
 
+    var checkButtonArray = [Int]()
     
     var kido3: Int = 0
     var view3gazo: Int = 0
@@ -57,6 +58,8 @@ class View3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
+        
         if UserDefaults.standard.integer(forKey: "LED3") == 1{
           //輝度//////////////////////////////////////////////輝度////////////////
           UIScreen.main.brightness = 0.1 //0.1の輝度（暗い）
@@ -77,10 +80,11 @@ class View3: UIViewController {
             image3View.image = UIImage(named: "white")
      
             
+        case 3 :
+            image3View.image = UIImage(named: "red")
             
         default:
-            image3View.image = UIImage(named: "red")
-        
+            image3View.image = UIImage(named: "white")
        
         }
         

@@ -230,6 +230,9 @@
                     <navigationItem key="navigationItem" id="aLo-zm-Y6n"/>
                     <connections>
                         <outlet property="checkView" destination="Hya-HJ-N8U" id="qL5-xR-EQQ"/>
+                        <outlet property="checkView1" destination="Hya-HJ-N8U" id="zKx-7e-tGn"/>
+                        <outlet property="checkView2" destination="fYB-Fw-9ld" id="Oen-Bg-1nw"/>
+                        <outlet property="checkView3" destination="3dK-qj-jzo" id="bNR-vW-LoY"/>
                         <outlet property="kidoView1" destination="FHR-46-Mdk" id="x2W-kr-hpI"/>
                         <outlet property="kidoView2" destination="gEa-yz-btL" id="UNe-RL-FQz"/>
                         <outlet property="kidoView3" destination="gZ2-b6-rgw" id="5BF-hi-ChT"/>
@@ -466,21 +469,30 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KfG-4n-XaM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerY" secondItem="UE1-9j-uJU" secondAttribute="centerY" id="Fq0-Bc-Am0"/>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerX" secondItem="UE1-9j-uJU" secondAttribute="centerX" id="igs-MN-Raw"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aR1-8s-pQn" appends="YES" id="Emm-NS-owj"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Eaf-m1-njA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-x5-QgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aR1-8s-pQn">
+                    <connections>
+                        <action selector="TapFirst:" destination="9Ra-jB-hfR" id="BjY-Gu-pel"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="737.41007194244605" y="73.920863309352526"/>
         </scene>
-        <!--View1-->
+        <!--1-->
         <scene sceneID="4LU-pP-MlN">
             <objects>
-                <viewController storyboardIdentifier="View1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrF-Vk-Utr" customClass="View1" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View1" title="1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrF-Vk-Utr" customClass="View1" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVV-2O-jET">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="1529" y="74"/>
         </scene>
-        <!--View2-->
+        <!--2-->
         <scene sceneID="oSP-gK-8b7">
             <objects>
-                <viewController storyboardIdentifier="View2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RbO-9L-5TA" customClass="View2" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View2" title="2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RbO-9L-5TA" customClass="View2" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mog-xI-qWs">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,10 +572,10 @@
             </objects>
             <point key="canvasLocation" x="2298.5507246376815" y="73.660714285714278"/>
         </scene>
-        <!--View3-->
+        <!--3-->
         <scene sceneID="F7O-O8-BbX">
             <objects>
-                <viewController storyboardIdentifier="View3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVU-VB-E2C" customClass="View3" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View3" title="3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVU-VB-E2C" customClass="View3" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xM-HR-KZ9">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

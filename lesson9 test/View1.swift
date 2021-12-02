@@ -11,6 +11,8 @@ class View1: UIViewController {
     
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
+    
+    var checkButtonArray = [Int]()
 
         var kido1: Int = 0
     
@@ -34,6 +36,11 @@ class View1: UIViewController {
         }
         else{
         
+            /*          受け取った配列                */
+            for checkNumber in checkButtonArray {
+            print("checkButtonArray for文\(checkNumber)")
+            if checkNumber == 2{
+            
             // ①storyboardのインスタンス取得
                     let storyboard: UIStoryboard = self.storyboard!
              
@@ -50,17 +57,40 @@ class View1: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             //self.present(nextView, animated: true, completion: nil)
-            
+                
+                break
+            }
+                
+           else if checkNumber == 3{
+                 
+           //画面遷移////////////////////////////
+           let view3 = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
+                  
+           view3.view3gazo = self.view3gazo
+                    
+                    let vc = view3
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                    
+                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                    
+                    //画面遷移////////////////////////////
+               break
+                }
+                
+                
         }
         
           
     }
     
-  
+    }
   
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
             
             if UserDefaults.standard.integer(forKey: "LED1") == 1{
               //輝度//////////////////////////////////////////////輝度////////////////
@@ -84,10 +114,11 @@ class View1: UIViewController {
             case 2 :
                 view1image.image = UIImage(named: "white")
          
-                
+            case 3 :
+                view1image.image = UIImage(named: "red")
                 
             default:
-                view1image.image = UIImage(named: "red")
+                view1image.image = UIImage(named: "white")
             
            
             }
