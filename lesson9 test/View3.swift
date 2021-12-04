@@ -58,7 +58,6 @@ class View3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
         
         if UserDefaults.standard.integer(forKey: "LED3") == 1{
           //輝度//////////////////////////////////////////////輝度////////////////
@@ -84,7 +83,7 @@ class View3: UIViewController {
             image3View.image = UIImage(named: "red")
             
         default:
-            image3View.image = UIImage(named: "white")
+            image3View.image = UIImage(named: "gazounashi")
        
         }
         
@@ -94,12 +93,6 @@ class View3: UIViewController {
         
         
         
-        
-        let manager = Manager.shared
-        print(manager.memory1)
-        print(manager.memory2)
-        print(manager.memory3)
-    
         
    //     image3View.image = UIImage(named: "green")
         
@@ -111,6 +104,24 @@ class View3: UIViewController {
                
            }
            
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //インストール直後に「はじめに」を押した時、配列内はnilなのでエラーが出るための処理。
+        //一度、「じゅんび」画面に入って何も触らず再度「はじめに」を押した時も同様の処理をするためにviewWillDisappearに入れている
+        let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+        if data != nil {
+            checkButtonArray = data as! [Int]
+        } else {
+            checkButtonArray = [1]
+        }
+        
+    }
+    
+    
+    
+    
+    
            /// ピンチイン・ピンチアウト時に実行される
     @objc func pinchView(sender: UIPinchGestureRecognizer) {
         // ①storyboardのインスタンス取得

@@ -76,9 +76,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="132" y="220" width="24" height="14"/>
+                                <rect key="frame" x="132" y="220" width="39" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                     </backgroundConfiguration>
@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHR-46-Mdk" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="233" y="207.5" width="49" height="39"/>
+                                <rect key="frame" x="233" y="215" width="49" height="39"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -119,9 +119,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-Fw-9ld" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="342" y="220" width="24" height="14"/>
+                                <rect key="frame" x="342" y="220" width="39" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                     </backgroundConfiguration>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEa-yz-btL" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="468" y="220" width="24" height="14"/>
+                                <rect key="frame" x="468" y="227.5" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -146,9 +146,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-qj-jzo" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="552" y="220" width="24" height="14"/>
+                                <rect key="frame" x="552" y="220" width="39" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                     </backgroundConfiguration>
@@ -158,7 +158,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ2-b6-rgw" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="678" y="220" width="24" height="14"/>
+                                <rect key="frame" x="678" y="227.5" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -303,7 +303,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="minus.circle.fill" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="minus.circle.fill" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="plusminusTap:" destination="dEk-SD-zvb" eventType="touchUpInside" id="sUt-no-Oci"/>
                                 </connections>
@@ -456,8 +458,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-TZ-Brz">
-                                <rect key="frame" x="266" y="502.5" width="302" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-TZ-Brz">
+                                <rect key="frame" x="0.0" y="502.5" width="834" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="28s-zZ-V0e"/>
                                     <constraint firstAttribute="width" constant="302" id="IBU-R0-rpm"/>
@@ -472,13 +474,18 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerY" secondItem="UE1-9j-uJU" secondAttribute="centerY" id="Fq0-Bc-Am0"/>
+                            <constraint firstItem="qC8-TZ-Brz" firstAttribute="leading" secondItem="KfG-4n-XaM" secondAttribute="leading" id="MuB-We-6dz"/>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerX" secondItem="UE1-9j-uJU" secondAttribute="centerX" id="igs-MN-Raw"/>
+                            <constraint firstItem="qC8-TZ-Brz" firstAttribute="trailing" secondItem="KfG-4n-XaM" secondAttribute="trailing" id="jds-6c-azu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="aR1-8s-pQn" appends="YES" id="Emm-NS-owj"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Eaf-m1-njA"/>
+                    <connections>
+                        <outlet property="FirstLabel" destination="qC8-TZ-Brz" id="17E-Nj-h7X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-x5-QgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="aR1-8s-pQn">
@@ -570,7 +577,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2298.5507246376815" y="73.660714285714278"/>
+            <point key="canvasLocation" x="2297.8417266187053" y="73.381294964028783"/>
         </scene>
         <!--3-->
         <scene sceneID="F7O-O8-BbX">
@@ -581,7 +588,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-Fm-f25">
-                                <rect key="frame" x="84" y="40" width="750" height="1092"/>
+                                <rect key="frame" x="0.0" y="20" width="814" height="1092"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Y9k-QR-iwh" appends="YES" id="R9c-uW-uT4"/>
@@ -612,8 +619,47 @@
             </objects>
             <point key="canvasLocation" x="3094.9640287769785" y="73.381294964028783"/>
         </scene>
+        <!--Last View Controller-->
+        <scene sceneID="9HQ-sa-jQH">
+            <objects>
+                <viewController storyboardIdentifier="viewLast" id="xQ4-0V-Jfl" customClass="LastViewController" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vS4-TR-b8D">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-8s-bvF">
+                                <rect key="frame" x="0.0" y="20" width="834" height="1092"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cf6-9O-23t" appends="YES" id="sRZ-Y2-HJO"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wPF-NQ-ljZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffm-8s-bvF" firstAttribute="leading" secondItem="wPF-NQ-ljZ" secondAttribute="leading" id="PCs-e6-ELO"/>
+                            <constraint firstItem="ffm-8s-bvF" firstAttribute="trailing" secondItem="wPF-NQ-ljZ" secondAttribute="trailing" id="hvr-x9-3FJ"/>
+                            <constraint firstItem="ffm-8s-bvF" firstAttribute="bottom" secondItem="wPF-NQ-ljZ" secondAttribute="bottom" id="hw2-pb-Qjh"/>
+                            <constraint firstItem="ffm-8s-bvF" firstAttribute="top" secondItem="wPF-NQ-ljZ" secondAttribute="top" id="jtZ-n0-QXM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewLastimage" destination="ffm-8s-bvF" id="Eio-cd-YCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20J-my-HgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cf6-9O-23t">
+                    <connections>
+                        <action selector="TapLast:" destination="xQ4-0V-Jfl" id="7KY-O0-rhe"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3934.5323741007196" y="73.381294964028783"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="check-ON" width="15" height="15"/>
         <image name="he" width="128" height="128"/>
         <image name="kidoOFF" width="25" height="25"/>
         <image name="minus" catalog="system" width="128" height="24"/>

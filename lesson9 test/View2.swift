@@ -38,27 +38,27 @@ class View2: UIViewController {
         
         else{
         
+            let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+             checkButtonArray = data as! [Int]
             /*          受け取った配列                */
             for checkNumber in checkButtonArray {
                 
             if checkNumber == 3{
             
             
-            // ①storyboardのインスタンス取得
-                    let storyboard: UIStoryboard = self.storyboard!
-             
-                    // ②遷移先ViewControllerのインスタンス取得
-                    let nextView = storyboard.instantiateViewController(withIdentifier: "View3") as! View3
-            nextView.view3gazo = self.view3gazo
-              
-                    // ③画面遷移
-            
-            // 遷移方法にフルスクリーンを指定
-            let vc = nextView
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-    //                self.present(nextView, animated: true, completion: nil)
-                break
+                //画面遷移////////////////////////////
+                let view3 = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
+                       
+                view3.view3gazo = self.view3gazo
+                         
+                         let vc = view3
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
                 }
             }
         }
@@ -67,7 +67,7 @@ class View2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
+        
         
         if UserDefaults.standard.integer(forKey: "LED2") == 1
         {
@@ -94,7 +94,7 @@ class View2: UIViewController {
             image2View.image = UIImage(named: "red")
             
         default:
-            image2View.image = UIImage(named: "white")
+            image2View.image = UIImage(named: "gazounashi")
         
        
         }
@@ -111,6 +111,24 @@ class View2: UIViewController {
                
            }
            
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //インストール直後に「はじめに」を押した時、配列内はnilなのでエラーが出るための処理。
+        //一度、「じゅんび」画面に入って何も触らず再度「はじめに」を押した時も同様の処理をするためにviewWillDisappearに入れている
+        let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+        if data != nil {
+            checkButtonArray = data as! [Int]
+        } else {
+            checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
+        }
+        
+    }
+    
+    
+    
+    
+    
            /// ピンチイン・ピンチアウト時に実行される
     @objc func pinchView(sender: UIPinchGestureRecognizer) {
                print("pinch")

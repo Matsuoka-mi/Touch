@@ -36,9 +36,11 @@ class View1: UIViewController {
         }
         else{
         
+            let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+             checkButtonArray = data as! [Int]
             /*          受け取った配列                */
             for checkNumber in checkButtonArray {
-            print("checkButtonArray for文\(checkNumber)")
+            print("タップ時のcheckButtonArray for文\(checkNumber)")
             if checkNumber == 2{
             
             // ①storyboardのインスタンス取得
@@ -90,8 +92,6 @@ class View1: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
-            
             if UserDefaults.standard.integer(forKey: "LED1") == 1{
               //輝度//////////////////////////////////////////////輝度////////////////
               UIScreen.main.brightness = 0.1 //0.1の輝度（暗い）
@@ -118,7 +118,7 @@ class View1: UIViewController {
                 view1image.image = UIImage(named: "red")
                 
             default:
-                view1image.image = UIImage(named: "white")
+                view1image.image = UIImage(named: "gazounashi")
             
            
             }
@@ -131,6 +131,24 @@ class View1: UIViewController {
                    
                }
                
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        //インストール直後に「はじめに」を押した時、配列内はnilなのでエラーが出るための処理。
+        //一度、「じゅんび」画面に入って何も触らず再度「はじめに」を押した時も同様の処理をするためにviewWillDisappearに入れている
+        let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+        if data != nil {
+            checkButtonArray = data as! [Int]
+        } else {
+            checkButtonArray = [1]
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
                /// ピンチイン・ピンチアウト時に実行される
         @objc func pinchView(sender: UIPinchGestureRecognizer) {
                    print("pinch")

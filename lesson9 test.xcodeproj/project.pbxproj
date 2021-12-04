@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BD08B3EE274FA6F80054756F /* tukuru1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */; };
+		BD334594275B78B700C69F59 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD334593275B78B700C69F59 /* LastViewController.swift */; };
 		BD378FFD275774090044EDB5 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD378FFC275774090044EDB5 /* View1.swift */; };
 		BD378FFF275777560044EDB5 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD378FFE275777560044EDB5 /* View2.swift */; };
 		BD379002275778370044EDB5 /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD379001275778370044EDB5 /* View3.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tukuru1ViewController.swift; sourceTree = "<group>"; };
+		BD334593275B78B700C69F59 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 		BD378FFC275774090044EDB5 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		BD378FFE275777560044EDB5 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		BD379001275778370044EDB5 /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				BD7EA38C275396A2009442F0 /* kido.swift */,
 				BD6BE65127550CE7003FAA13 /* plusminus.swift */,
 				BDB6A1A6274CC71400E8EFC3 /* FirstViewController.swift */,
+				BD334593275B78B700C69F59 /* LastViewController.swift */,
 				BDB6A1CA274CEB4E00E8EFC3 /* zyunbanViewController.swift */,
 				BDB6A1CC274CED2C00E8EFC3 /* tukuruViewController.swift */,
 				BD08B3ED274FA6F80054756F /* tukuru1ViewController.swift */,
@@ -183,6 +186,7 @@
 				BD379002275778370044EDB5 /* View3.swift in Sources */,
 				BD08B3EE274FA6F80054756F /* tukuru1ViewController.swift in Sources */,
 				BDF89741274E795C00A05409 /* CheckBox.swift in Sources */,
+				BD334594275B78B700C69F59 /* LastViewController.swift in Sources */,
 				BD378FFD275774090044EDB5 /* View1.swift in Sources */,
 				BDB6A1CB274CEB4E00E8EFC3 /* zyunbanViewController.swift in Sources */,
 				BDB6A18B274C975A00E8EFC3 /* AppDelegate.swift in Sources */,

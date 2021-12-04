@@ -10,7 +10,7 @@ import UIKit
 
 class CheckBox: UIButton {
     // Images
-    let checkedImage = UIImage(named: "checkON")! as UIImage
+    let checkedImage = UIImage(named: "check-ON")! as UIImage
     let uncheckedImage = UIImage(named: "checkOFF")! as UIImage
 
     // Bool property

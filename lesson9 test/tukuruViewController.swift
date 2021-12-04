@@ -29,6 +29,12 @@ class tukuruViewController: UIViewController {
     var gazou2:Int = 0
     var gazou3:Int = 0
     
+    var tagNumber1:Int = 0
+    var tagNumber2:Int = 0
+    var tagNumber3:Int = 0
+    
+    var checkButtonArray = [Int]()
+    
 
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
@@ -142,16 +148,15 @@ class tukuruViewController: UIViewController {
         switch sender.tag {
         case 1:
         
-        //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+        //タッチするとプラスボタンがマイナスに。
         if iroNumber1 == 0 {
             
             //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
             self.plusminus1.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
             userDefaults.set(iroNumber1 , forKey: "iro1")
             
-            //       self.kido.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
-            //        self.kido.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
             
+           
             //画面遷移
             // ①storyboardのインスタンス取得
             let storyboard: UIStoryboard = self.storyboard!
@@ -179,6 +184,11 @@ class tukuruViewController: UIViewController {
             tukuimageView1.image = UIImage(named: "gazounashi")
             self.plusminus1.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
             userDefaults.set(iroNumber1 , forKey: "iro1")
+            
+            //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+            self.tagNumber1 = 0
+            userDefaults.set(tagNumber1 , forKey: "tagNumber1")
+            
             
         }
         
@@ -221,6 +231,9 @@ class tukuruViewController: UIViewController {
                 self.plusminus2.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
                 userDefaults.set(iroNumber2 , forKey: "iro2")
                 
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber2 = 0
+                userDefaults.set(tagNumber2 , forKey: "tagNumber2")
             }
             
             
@@ -264,6 +277,10 @@ class tukuruViewController: UIViewController {
                 tukuimageView3.image = UIImage(named: "gazounashi")
                 self.plusminus3.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
                 userDefaults.set(iroNumber3 , forKey: "iro3")
+               
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber3 = 0
+                userDefaults.set(tagNumber3 , forKey: "tagNumber3")
                 
             }
         }
@@ -273,6 +290,48 @@ class tukuruViewController: UIViewController {
     
     
     @IBAction func modoru(_ sender: UIButton) {
+        
+        
+        
+        /*  　　　　配列         */
+        //checkButtonArrayにtrue だった　tagNumber を入れる
+        
+        checkButtonArray = [Int]()
+        
+        if userDefaults.integer(forKey: "tagNumber1") == 1{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber1")]
+        }
+        
+        else {
+            checkButtonArray += [0]
+        }
+      
+        
+       if userDefaults.integer(forKey: "tagNumber2") == 2{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber2")]
+        }
+        
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber3") == 3{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber3")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        //戻るを押した時に配列を記憶させる
+        userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
+        
+        //昇順にソート
+        checkButtonArray.sort { $0 < $1 }
+        print("戻るを押した時のチェックボックス配列\(checkButtonArray)")
+        
+        
+        
         //画面遷移////////////////////////////
         //色の値を渡す
         let View = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController

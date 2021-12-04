@@ -15,8 +15,6 @@ class zyunbanViewController: UIViewController {
     let userDefaults:UserDefaults = UserDefaults.standard
     
 
-    
-    //forkey
     var LED1: Int = 0
     var LED2: Int = 0
     var LED3: Int = 0
@@ -71,6 +69,7 @@ class zyunbanViewController: UIViewController {
     
     @IBAction func zyunmodoru(_ sender: UIButton) {
     
+        print("zyunbanのもどるボタン処理の最初のtagNumber1\(tagNumber1)")
         /*  　　　　配列         */
         //checkButtonArrayにtrue だった　tagNumber を入れる
         
@@ -80,12 +79,25 @@ class zyunbanViewController: UIViewController {
             checkButtonArray += [userDefaults.integer(forKey: "tagNumber1")]
         }
         
+        else {
+            checkButtonArray += [0]
+        }
+      
+        
        if userDefaults.integer(forKey: "tagNumber2") == 2{
             checkButtonArray += [userDefaults.integer(forKey: "tagNumber2")]
         }
         
+        else {
+            checkButtonArray += [0]
+        }
+        
         if userDefaults.integer(forKey: "tagNumber3") == 3{
             checkButtonArray += [userDefaults.integer(forKey: "tagNumber3")]
+        }
+
+        else {
+            checkButtonArray += [0]
         }
         
         //戻るを押した時に配列を記憶させる
@@ -95,16 +107,6 @@ class zyunbanViewController: UIViewController {
         checkButtonArray.sort { $0 < $1 }
         print("戻るを押した時のチェックボックス配列\(checkButtonArray)")
         
-       
-        
-        //配列の中を checkNumber に取り出す
-        //       for checkNumber in checkButtonArray {
-        //           print("checkButtonArray for文\(checkNumber)")
-        //            if checkNumber == 2{
-        //            }
-        //        }
-        
-        /*  　　　ここまで　配列         */
         
         // ①storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
@@ -127,6 +129,8 @@ class zyunbanViewController: UIViewController {
     @IBAction func checkView(_ sender: CheckBox) {
         print(sender.isChecked)
         
+        print("zyunbanのcheckViewボタン処理の最初のtagNumber1\(tagNumber1)")
+        
         //checkが入ればtrue 、その時 tagNumberに　tag と同じ数字を入れる
         switch sender.tag {
         case 1:
@@ -134,16 +138,17 @@ class zyunbanViewController: UIViewController {
                 tagNumber1 = 1
                 userDefaults.set(sender.isChecked , forKey: "tagBool1")
                 userDefaults.set(tagNumber1 , forKey: "tagNumber1")
-                
             }
             else
             {
                 tagNumber1 = 0
                 userDefaults.set(sender.isChecked , forKey: "tagBool1")
-                userDefaults.set(tagNumber1 , forKey: "tagNumber1")
+                userDefaults.set(tagNumber2 , forKey: "tagNumber1")
             }
+            print("zyunbanのcheckViewボタン処理の後のtagNumber1\(tagNumber1)")
             
-            print("tagNumber1は\(self.tagNumber1)")
+            
+            print("tagNumber1は\(tagNumber1)")
             print("tagNumber1のtagBool1は\(userDefaults.bool(forKey: "tagBool1"))")
             
         case 2:
@@ -158,7 +163,7 @@ class zyunbanViewController: UIViewController {
                 userDefaults.set(sender.isChecked , forKey: "tagBool2")
                 userDefaults.set(tagNumber2 , forKey: "tagNumber2")
             }
-            print("tagNumber2は\(self.tagNumber2)")
+            print("tagNumber2は\(tagNumber2)")
             print("tagNumber1のtagBool2は\(userDefaults.bool(forKey: "tagBool2"))")
             
         default :
@@ -174,7 +179,7 @@ class zyunbanViewController: UIViewController {
                 userDefaults.set(sender.isChecked , forKey: "tagBool3")
                 userDefaults.set(tagNumber3 , forKey: "tagNumber3")
             }
-            print("tagNumber3は\(self.tagNumber3)")
+            
             print("tagNumber3のtagBool3は\(userDefaults.bool(forKey: "tagBool3"))")
             
         }
@@ -277,35 +282,35 @@ class zyunbanViewController: UIViewController {
         if userDefaults.bool(forKey: "tagBool1")
         {
             self.checkView1.setImage(picturecheckON, for: .normal)
-            tagNumber1 = 1
+            self.tagNumber1 = 1
         }
         else
         {
             self.checkView1.setImage(picturecheckOFF, for: .normal)
-            tagNumber1 = 0
+            self.tagNumber1 = 0
         }
         
         if userDefaults.bool(forKey: "tagBool2")
         {
             self.checkView2.setImage(picturecheckON, for: .normal)
-            tagNumber2 = 1
+            self.tagNumber2 = 1
         }
         else
         {
             self.checkView2.setImage(picturecheckOFF, for: .normal)
-            tagNumber2 = 0
+            self.tagNumber2 = 0
         }
         
         
         if userDefaults.bool(forKey: "tagBool3")
         {
             self.checkView3.setImage(picturecheckON, for: .normal)
-            tagNumber3 = 1
+            self.tagNumber3 = 1
         }
         else
         {
             self.checkView3.setImage(picturecheckOFF, for: .normal)
-            tagNumber3 = 0
+            self.tagNumber3 = 0
         }
         
             print("if直後のtagNumber3は\(userDefaults.integer(forKey: "tagNumber3"))")
@@ -340,9 +345,9 @@ class zyunbanViewController: UIViewController {
         //画面を読み込んだ時に前に保存した配列を読み込む
         checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
        
-        print("読み込んだときのtagNumber1は\(self.tagNumber1)")
-        print("読み込んだときのtagNumber２は\(self.tagNumber2)")
-        print("読み込んだときのtagNumber３は\(self.tagNumber3)")
+        print("zyu読み込んだときのtagNumber1は\(tagNumber1)")
+        print("zyu読み込んだときのtagNumber２は\(tagNumber2)")
+        print("zyu読み込んだときのtagNumber３は\(tagNumber3)")
         
          
         
@@ -350,21 +355,21 @@ class zyunbanViewController: UIViewController {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
         iroNumber1 = userDefaults.integer(forKey: "iro1")
         self.gazouzyun1 = iroNumber1
-        print("zyunbanのiroNumberは\(iroNumber1)")
+        print("zyunbanのiroNumberは\(tagNumber1)")
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         //アプリを再起動してもiro2の色を表示する
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
         iroNumber2 = userDefaults.integer(forKey: "iro2")
         self.gazouzyun2 = iroNumber2
-        print("zyunbanのiroNumber2は\(iroNumber2)")
+        print("zyunbanのiroNumber2は\(tagNumber2)")
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         //アプリを再起動してもiro3の色を表示する
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
         iroNumber3 = userDefaults.integer(forKey: "iro3")
         self.gazouzyun3 = iroNumber3
-        print("zyunbanのiroNumber3は\(iroNumber3)")
+        print("zyunbanのiroNumber3は\(tagNumber3)")
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         //zyunimageViewに何を表示させるか、iroNumberによって変わる
@@ -381,7 +386,12 @@ class zyunbanViewController: UIViewController {
           
             self.checkView1.setImage(picturecheckmukou, for: .normal)
             checkView1.isEnabled = false
-            
+           
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            tagNumber1 = 0
+            userDefaults.set(tagNumber1 , forKey: "tagNumber1")
+            print("zyunbanの最初の画像がなしの時のtagNumber\(tagNumber1)")
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             
         }
         
@@ -398,6 +408,12 @@ class zyunbanViewController: UIViewController {
             
             self.checkView2.setImage(picturecheckmukou, for: .normal)
             checkView2.isEnabled = false
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            tagNumber2 = 0
+            userDefaults.set(tagNumber2 , forKey: "tagNumber2")
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
         }
         
         switch iroNumber3{
@@ -412,6 +428,12 @@ class zyunbanViewController: UIViewController {
             
             self.checkView3.setImage(picturecheckmukou, for: .normal)
             checkView3.isEnabled = false
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            tagNumber3 = 0
+            userDefaults.set(tagNumber3 , forKey: "tagNumber3")
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
         }
             
             
