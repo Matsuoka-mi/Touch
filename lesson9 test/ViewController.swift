@@ -19,6 +19,11 @@ class ViewController: UIViewController {
     
     var checkButtonArray = [Int]()
     
+    /////あとで消す
+    ///
+    @IBOutlet weak var imagetest: UIImageView!
+    /////あとで消す
+    
     
     @IBAction func hazimeru(_ sender: UIButton) {
         
@@ -222,7 +227,7 @@ class ViewController: UIViewController {
         print("はじめにの画面のtag1の明るさはLED3\(UserDefaults.standard.integer(forKey: "LED3"))")
         
         
-        
+        imagetest.image = UIImage(named: "whiteButton")
         
         //インストール直後に「はじめに」を押した時、配列内はnilなのでエラーが出るための処理。
         //一度、「じゅんび」画面に入って何も触らず再度「はじめに」を押した時も同様の処理をするためにviewWillDisappearに入れている

@@ -143,13 +143,11 @@ class zyunbanViewController: UIViewController {
             {
                 tagNumber1 = 0
                 userDefaults.set(sender.isChecked , forKey: "tagBool1")
-                userDefaults.set(tagNumber2 , forKey: "tagNumber1")
+                userDefaults.set(tagNumber1 , forKey: "tagNumber1")
             }
-            print("zyunbanのcheckViewボタン処理の後のtagNumber1\(tagNumber1)")
-            
-            
             print("tagNumber1は\(tagNumber1)")
             print("tagNumber1のtagBool1は\(userDefaults.bool(forKey: "tagBool1"))")
+            
             
         case 2:
             if sender.isChecked == true{
@@ -245,7 +243,15 @@ class zyunbanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
+        
+        //  ボタンの画像サイズ変更
+        checkView1.imageView?.contentMode = .scaleAspectFill
+        checkView1.contentHorizontalAlignment = .fill
+        checkView1.contentVerticalAlignment = .fill
+        
         
         
         if userDefaults.integer(forKey: "LED1") == 0
@@ -276,7 +282,9 @@ class zyunbanViewController: UIViewController {
             self.kidoView3.setImage(picture1OFF, for: .normal)
         }
         
-      
+        
+        
+        print("順番を読み込んだ時のtagBool1は\(userDefaults.bool(forKey: "tagBool1"))")
         
         //最初の読み込みの時に　チェックボックスを前にチェックした状態にする
         if userDefaults.bool(forKey: "tagBool1")
@@ -342,6 +350,11 @@ class zyunbanViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        checkView1.imageView?.contentMode = .scaleAspectFit
+        checkView1.contentHorizontalAlignment = .fill
+        checkView1.contentVerticalAlignment = .fill
+        
         //画面を読み込んだ時に前に保存した配列を読み込む
         checkButtonArray = UserDefaults.standard.object(forKey: "checkButtonArray") as! [Int]
        

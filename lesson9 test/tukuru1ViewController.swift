@@ -24,6 +24,8 @@ class tukuru1ViewController: UIViewController {
     var gazo1: Int = 0
     
     var plusminustag:Int = 0
+    
+    let syoukyo = 1
    
     
     //forkey
@@ -46,6 +48,9 @@ class tukuru1ViewController: UIViewController {
             userDefaults.set(iroNumber1 , forKey: "iro1")
             self.tagNumber1 = 1
             userDefaults.set(self.tagNumber1 , forKey: "tagNumber1")
+    
+            userDefaults.set(syoukyo , forKey: "tagBool1")
+            print("画像を消したときのtagBool1はtukuruで\(userDefaults.bool(forKey: "tagBool1"))")
             
         //２番の画像のプラスマイナスボタンが押されて遷移してきた時
         case 2:
@@ -53,6 +58,9 @@ class tukuru1ViewController: UIViewController {
             userDefaults.set(iroNumber2 , forKey: "iro2")
             self.tagNumber2 = 2
             userDefaults.set(self.tagNumber2 , forKey: "tagNumber2")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool2")
+            print("画像を消したときのtagBool2はtukuruで\(userDefaults.bool(forKey: "tagBool2"))")
         
         ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
         default:
@@ -60,6 +68,10 @@ class tukuru1ViewController: UIViewController {
             userDefaults.set(iroNumber3 , forKey: "iro3")
             self.tagNumber3 = 3
             userDefaults.set(self.tagNumber3 , forKey: "tagNumber3")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool3")
+            print("画像を消したときのtagBool3はtukuruで\(userDefaults.bool(forKey: "tagBool3"))")
+            
         }
        
        
@@ -87,12 +99,18 @@ class tukuru1ViewController: UIViewController {
             self.tagNumber1 = 1
             userDefaults.set(self.tagNumber1 , forKey: "tagNumber1")
             
+            userDefaults.set(syoukyo , forKey: "tagBool1")
+            print("画像を消したときのtagBool1はtukuruで\(userDefaults.bool(forKey: "tagBool1"))")
+            
         //２番の画像のプラスマイナスボタンが押されて遷移してきた時
         case 2:
             iroNumber2 = self.gazo1
             userDefaults.set(iroNumber2 , forKey: "iro2")
             self.tagNumber2 = 2
             userDefaults.set(self.tagNumber2 , forKey: "tagNumber2")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool2")
+            print("画像を消したときのtagBool2はtukuruで\(userDefaults.bool(forKey: "tagBool2"))")
         
         ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
         default:
@@ -100,6 +118,9 @@ class tukuru1ViewController: UIViewController {
             userDefaults.set(iroNumber3 , forKey: "iro3")
             self.tagNumber3 = 3
             userDefaults.set(self.tagNumber3 , forKey: "tagNumber3")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool3")
+            print("画像を消したときのtagBool3はtukuruで\(userDefaults.bool(forKey: "tagBool3"))")
         }
         
         print("plusminusのたぐ\(plusminustag)")
@@ -131,12 +152,18 @@ class tukuru1ViewController: UIViewController {
             self.tagNumber1 = 1
             userDefaults.set(self.tagNumber1 , forKey: "tagNumber1")
             
+            userDefaults.set(syoukyo , forKey: "tagBool1")
+            print("画像を消したときのtagBool1はtukuruで\(userDefaults.bool(forKey: "tagBool1"))")
+            
         //２番の画像のプラスマイナスボタンが押されて遷移してきた時
         case 2:
             iroNumber2 = self.gazo1
             userDefaults.set(iroNumber2 , forKey: "iro2")
             self.tagNumber2 = 2
             userDefaults.set(self.tagNumber2 , forKey: "tagNumber2")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool2")
+            print("画像を消したときのtagBool2はtukuruで\(userDefaults.bool(forKey: "tagBool2"))")
         
         ////それ以外の画像のプラスマイナスボタンが押されて遷移してきた時
         default:
@@ -144,6 +171,9 @@ class tukuru1ViewController: UIViewController {
             userDefaults.set(iroNumber3 , forKey: "iro3")
             self.tagNumber3 = 3
             userDefaults.set(self.tagNumber3 , forKey: "tagNumber3")
+            
+            userDefaults.set(syoukyo , forKey: "tagBool3")
+            print("画像を消したときのtagBool3はtukuruで\(userDefaults.bool(forKey: "tagBool3"))")
         }
 
       
@@ -262,6 +292,11 @@ class tukuru1ViewController: UIViewController {
         //iroNumberが0
 //        userDefaults.set(iroNumber , forKey: "iro1")                //iro1というキー
         print("tukuru1のiroNumber\(iroNumber1)")
+        
+        //青にする(色)
+        self.imageViewtukuru1.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.imageViewtukuru1.layer.borderWidth = 2
         
      
     }

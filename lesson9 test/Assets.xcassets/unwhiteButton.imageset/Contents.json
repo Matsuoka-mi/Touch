@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "check-ON.png",
+      "filename" : "unwhiteButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "check-ON@2x.png",
+      "filename" : "unwhiteButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "check-ON@3x.png",
+      "filename" : "unwhiteButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -35,7 +35,8 @@ class tukuruViewController: UIViewController {
     
     var checkButtonArray = [Int]()
     
-
+  
+    
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
     
@@ -46,6 +47,25 @@ class tukuruViewController: UIViewController {
         //      self.gazou1 = iroNumber1
         label.text = "gazouは\(gazou1)"
         print("gazou1は\(self.gazou1)")
+        
+        //画像１の枠線の変更
+        //青にする(色)
+        self.tukuimageView1.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView1.layer.borderWidth = 2
+        
+        //画像２の枠線の変更
+        //青にする(色)
+        self.tukuimageView2.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView2.layer.borderWidth = 2
+        
+        //画像３の枠線の変更
+        //青にする(色)
+        self.tukuimageView3.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView3.layer.borderWidth = 2
+        
         
         
     }
@@ -139,6 +159,9 @@ class tukuruViewController: UIViewController {
             tukuimageView3.image = UIImage(named: "gazounashi")
         }
         
+        
+        
+        
     }
     
     
@@ -189,6 +212,7 @@ class tukuruViewController: UIViewController {
             self.tagNumber1 = 0
             userDefaults.set(tagNumber1 , forKey: "tagNumber1")
             
+         
             
         }
         
@@ -234,6 +258,8 @@ class tukuruViewController: UIViewController {
                 //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
                 self.tagNumber2 = 0
                 userDefaults.set(tagNumber2 , forKey: "tagNumber2")
+                
+          
             }
             
             
@@ -281,6 +307,8 @@ class tukuruViewController: UIViewController {
                 //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
                 self.tagNumber3 = 0
                 userDefaults.set(tagNumber3 , forKey: "tagNumber3")
+                
+            
                 
             }
         }

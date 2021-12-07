@@ -27,9 +27,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txj-pl-GzK">
-                                <rect key="frame" x="20" y="374" width="152" height="48"/>
+                                <rect key="frame" x="20" y="374" width="122" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="じゅんばん"/>
+                                <state key="normal" title="せってい"/>
                                 <connections>
                                     <action selector="zyunban:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ah-ZS-dHH"/>
                                 </connections>
@@ -42,6 +42,13 @@
                                     <action selector="tukuru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lx-OE-8LW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAB-Kh-OG0">
+                                <rect key="frame" x="297" y="593" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RXH-5R-ZdF"/>
+                                    <constraint firstAttribute="width" constant="40" id="ZnY-Y3-LQY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,6 +62,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ORE-6x-E3y"/>
+                    <connections>
+                        <outlet property="imagetest" destination="SAB-Kh-OG0" id="qNf-nn-Vqo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,15 +78,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QrZ-Fo-ESG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QrZ-Fo-ESG">
                                 <rect key="frame" x="132" y="60" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="HmD-II-M3Y"/>
                                     <constraint firstAttribute="width" constant="150" id="wni-uW-W4m"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="132" y="220" width="39" height="29"/>
+                                <rect key="frame" x="132" y="220" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3GM-U6-Hhw"/>
+                                    <constraint firstAttribute="height" constant="40" id="O2Y-Kk-meo"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -97,7 +116,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHR-46-Mdk" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="233" y="215" width="49" height="39"/>
+                                <rect key="frame" x="233" y="220.5" width="49" height="39"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -111,15 +130,20 @@
                                     <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="FMe-Ke-uGg"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgE-Bj-3bw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgE-Bj-3bw">
                                 <rect key="frame" x="552" y="60" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="BQc-Na-hgG"/>
                                     <constraint firstAttribute="height" constant="150" id="Fva-XF-Lmt"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-Fw-9ld" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="342" y="220" width="39" height="29"/>
+                                <rect key="frame" x="342" y="169.5" width="160" height="141"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -131,7 +155,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEa-yz-btL" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="468" y="227.5" width="24" height="14"/>
+                                <rect key="frame" x="468" y="233" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -146,7 +170,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-qj-jzo" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="552" y="220" width="39" height="29"/>
+                                <rect key="frame" x="552" y="169.5" width="160" height="141"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -158,7 +182,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ2-b6-rgw" customClass="kido" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="678" y="227.5" width="24" height="14"/>
+                                <rect key="frame" x="678" y="233" width="24" height="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" systemColor="systemGray2Color"/>
@@ -172,12 +196,17 @@
                                     <action selector="kidoView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="tHt-oT-aOB"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HsB-Jb-2Xd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HsB-Jb-2Xd">
                                 <rect key="frame" x="342" y="60" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7e3-xB-4R7"/>
                                     <constraint firstAttribute="width" constant="150" id="HOw-WD-oNe"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-Tr-XLj">
                                 <rect key="frame" x="132" y="36" width="8" height="21"/>
@@ -275,8 +304,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-0f-zzj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-0f-zzj">
                                 <rect key="frame" x="342" y="74" width="150" height="150"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-KH-Oe6">
                                 <rect key="frame" x="342" y="244" width="50" height="50"/>
@@ -310,15 +344,25 @@
                                     <action selector="plusminusTap:" destination="dEk-SD-zvb" eventType="touchUpInside" id="sUt-no-Oci"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dgj-eC-KPg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dgj-eC-KPg">
                                 <rect key="frame" x="552" y="74" width="150" height="150"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="he" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-2E-nuO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="he" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-2E-nuO">
                                 <rect key="frame" x="132" y="74" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="5vj-Lo-ATH"/>
                                     <constraint firstAttribute="width" constant="150" id="wla-bm-dTG"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epk-zV-8aR">
                                 <rect key="frame" x="132" y="50" width="8" height="21"/>
@@ -398,40 +442,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-Q9-gCz">
-                                <rect key="frame" x="87" y="157" width="240" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-Q9-gCz">
+                                <rect key="frame" x="175" y="218.5" width="484" height="675"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZfY-Q9-gCz" secondAttribute="height" multiplier="48:67" id="jJN-lR-Ssi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghW-aB-hbs">
-                                <rect key="frame" x="92" y="514" width="59" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghW-aB-hbs">
+                                <rect key="frame" x="175" y="903.5" width="59" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="black"/>
                                 <connections>
                                     <action selector="blackAction:" destination="yeW-3S-ts4" eventType="touchUpInside" id="2LS-vB-Fmq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7R-AN-tmp">
-                                <rect key="frame" x="166" y="514" width="59" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7R-AN-tmp">
+                                <rect key="frame" x="244" y="903.5" width="59" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="white"/>
                                 <connections>
                                     <action selector="whiteAction:" destination="yeW-3S-ts4" eventType="touchUpInside" id="LO9-AQ-NNC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-pb-Dgx">
-                                <rect key="frame" x="255" y="514" width="46" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-pb-Dgx">
+                                <rect key="frame" x="613" y="903.5" width="46" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="red"/>
                                 <connections>
                                     <action selector="redAction:" destination="yeW-3S-ts4" eventType="touchUpInside" id="Osy-pV-310"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-db-5bX">
-                                <rect key="frame" x="147" y="593" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-db-5bX">
+                                <rect key="frame" x="592" y="967" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="もどる"/>
                                 <connections>
@@ -441,6 +488,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ipE-dB-ALb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SZh-pb-Dgx" firstAttribute="top" secondItem="ZfY-Q9-gCz" secondAttribute="bottom" constant="10" id="0Ai-EI-1uB"/>
+                            <constraint firstItem="ghW-aB-hbs" firstAttribute="leading" secondItem="ZfY-Q9-gCz" secondAttribute="leading" id="3Te-KN-BGU"/>
+                            <constraint firstItem="ghW-aB-hbs" firstAttribute="top" secondItem="ZfY-Q9-gCz" secondAttribute="bottom" constant="10" id="69w-xW-NrV"/>
+                            <constraint firstItem="gEt-db-5bX" firstAttribute="trailing" secondItem="SZh-pb-Dgx" secondAttribute="trailing" id="Cbb-FF-6tz"/>
+                            <constraint firstItem="ZfY-Q9-gCz" firstAttribute="centerX" secondItem="yRL-Xs-JCa" secondAttribute="centerX" id="cRF-OU-DZr"/>
+                            <constraint firstItem="f7R-AN-tmp" firstAttribute="leading" secondItem="ghW-aB-hbs" secondAttribute="trailing" constant="10" id="lvv-aL-8Pc"/>
+                            <constraint firstItem="SZh-pb-Dgx" firstAttribute="trailing" secondItem="ZfY-Q9-gCz" secondAttribute="trailing" id="snL-1R-dA3"/>
+                            <constraint firstItem="f7R-AN-tmp" firstAttribute="top" secondItem="ZfY-Q9-gCz" secondAttribute="bottom" constant="10" id="v21-W5-QTG"/>
+                            <constraint firstItem="ZfY-Q9-gCz" firstAttribute="centerY" secondItem="yRL-Xs-JCa" secondAttribute="centerY" id="wuS-DZ-N3U"/>
+                            <constraint firstItem="gEt-db-5bX" firstAttribute="top" secondItem="SZh-pb-Dgx" secondAttribute="bottom" constant="50" id="x5F-9j-9Vu"/>
+                            <constraint firstItem="ZfY-Q9-gCz" firstAttribute="width" secondItem="yRL-Xs-JCa" secondAttribute="width" multiplier="0.58" id="xgT-Nw-nmy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageViewtukuru1" destination="ZfY-Q9-gCz" id="cDo-OA-utp"/>
@@ -634,14 +694,38 @@
                                     <outletCollection property="gestureRecognizers" destination="cf6-9O-23t" appends="YES" id="sRZ-Y2-HJO"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s90-9t-fQY">
+                                <rect key="frame" x="166" y="466.5" width="502" height="179.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">「つくる」から画像を
+作って「せってい」で
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="50"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="チェックを入れてね">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="50"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="100" lineHeightMultiple="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wPF-NQ-ljZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ffm-8s-bvF" firstAttribute="leading" secondItem="wPF-NQ-ljZ" secondAttribute="leading" id="PCs-e6-ELO"/>
+                            <constraint firstItem="s90-9t-fQY" firstAttribute="centerY" secondItem="vS4-TR-b8D" secondAttribute="centerY" id="QmH-Qr-R1q"/>
                             <constraint firstItem="ffm-8s-bvF" firstAttribute="trailing" secondItem="wPF-NQ-ljZ" secondAttribute="trailing" id="hvr-x9-3FJ"/>
                             <constraint firstItem="ffm-8s-bvF" firstAttribute="bottom" secondItem="wPF-NQ-ljZ" secondAttribute="bottom" id="hw2-pb-Qjh"/>
                             <constraint firstItem="ffm-8s-bvF" firstAttribute="top" secondItem="wPF-NQ-ljZ" secondAttribute="top" id="jtZ-n0-QXM"/>
+                            <constraint firstItem="s90-9t-fQY" firstAttribute="centerX" secondItem="vS4-TR-b8D" secondAttribute="centerX" id="oFb-JU-Ria"/>
                         </constraints>
                     </view>
                     <connections>
@@ -659,7 +743,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="check-ON" width="15" height="15"/>
+        <image name="check-ON" width="136" height="127"/>
         <image name="he" width="128" height="128"/>
         <image name="kidoOFF" width="25" height="25"/>
         <image name="minus" catalog="system" width="128" height="24"/>
