@@ -85,7 +85,7 @@ class tukuruViewController: UIViewController {
         }
         else{
             //「画像がありません」以外ならボタンをマイナスにする
-            self.plusminus1.setImage(UIImage(systemName: "minus.circle.fill"), for: .selected)
+            self.plusminus1.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
         }
         print("プラスを押す前のtukuruのiroNumberは\(iroNumber1)")
         
@@ -103,7 +103,7 @@ class tukuruViewController: UIViewController {
         }
         else{
             //「画像がありません」以外ならボタンをマイナスにする
-            self.plusminus2.setImage(UIImage(systemName: "minus.circle.fill"), for: .selected)
+            self.plusminus2.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
         }
         print("プラスを押す前のtukuruのiroNumberは\(iroNumber2)")
         
@@ -120,7 +120,7 @@ class tukuruViewController: UIViewController {
         }
         else{
             //「画像がありません」以外ならボタンをマイナスにする
-            self.plusminus3.setImage(UIImage(systemName: "minus.circle.fill"), for: .selected)
+            self.plusminus3.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
         }
         print("プラスを押す前のtukuruのiroNumberは\(iroNumber3)")
         
@@ -353,6 +353,7 @@ class tukuruViewController: UIViewController {
         
         //戻るを押した時に配列を記憶させる
         userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
+                         
         
         //昇順にソート
         checkButtonArray.sort { $0 < $1 }

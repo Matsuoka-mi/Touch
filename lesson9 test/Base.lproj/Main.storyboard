@@ -90,17 +90,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-HJ-N8U" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
                                 <rect key="frame" x="132" y="220" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="3GM-U6-Hhw"/>
                                     <constraint firstAttribute="height" constant="40" id="O2Y-Kk-meo"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain" image="check-ON">
+                                <buttonConfiguration key="configuration" style="plain" image="check-ON" imagePadding="0.0">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
                                         <color key="strokeColor" systemColor="systemGray5Color"/>
                                     </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="checkView:" destination="N2C-Me-wU1" eventType="touchUpInside" id="d1d-FZ-y5X"/>
@@ -143,7 +144,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYB-Fw-9ld" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="342" y="169.5" width="160" height="141"/>
+                                <rect key="frame" x="342" y="225.5" width="39" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -170,7 +171,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-qj-jzo" customClass="CheckBox" customModule="lesson9_test" customModuleProvider="target">
-                                <rect key="frame" x="552" y="169.5" width="160" height="141"/>
+                                <rect key="frame" x="552" y="225.5" width="39" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain" image="check-ON">
                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="-4">
@@ -743,7 +744,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="check-ON" width="136" height="127"/>
+        <image name="check-ON" width="15" height="15"/>
         <image name="he" width="128" height="128"/>
         <image name="kidoOFF" width="25" height="25"/>
         <image name="minus" catalog="system" width="128" height="24"/>
