@@ -16,6 +16,22 @@ var iroNumber3: Int = 0
 
 class tukuru1ViewController: UIViewController {
     
+    @IBOutlet weak var blackButton: UIButton!
+    @IBOutlet weak var whiteButton: UIButton!
+    @IBOutlet weak var redButton: UIButton!
+    
+    
+    
+    
+    let blackB = UIImage(named: "blackButton")
+    let blackb = UIImage(named: "unblackButton")
+    let whiteB = UIImage(named: "whiteButton")
+    let whiteb = UIImage(named: "unwhiteButton")
+    let redB = UIImage(named: "redButton")
+    let redb = UIImage(named: "unredButton")
+    
+    
+    
     var checkButtonArray = [Int]()
     var tagNumber1:Int = 0
     var tagNumber2:Int = 0
@@ -39,6 +55,14 @@ class tukuru1ViewController: UIViewController {
     @IBAction func blackAction(_ sender: UIButton) {
         self.gazo1 = 1
         imageViewtukuru1.image = UIImage(named: "black")            //画像を黒くする
+        
+        
+        //ボタンの画像の切り替え
+        self.blackButton.setImage(blackB, for: .normal)
+        self.whiteButton.setImage(whiteb, for: .normal)
+        self.redButton.setImage(redb, for: .normal)
+        
+        
         
         //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
         switch plusminustag {
@@ -89,6 +113,13 @@ class tukuru1ViewController: UIViewController {
         
         self.gazo1 = 2
         imageViewtukuru1.image = UIImage(named: "white")
+        
+        
+        //ボタンの画像の切り替え
+        self.blackButton.setImage(blackb, for: .normal)
+        self.whiteButton.setImage(whiteB, for: .normal)
+        self.redButton.setImage(redb, for: .normal)
+        
         
         //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
         switch plusminustag {
@@ -142,6 +173,11 @@ class tukuru1ViewController: UIViewController {
         
         self.gazo1 = 3
         imageViewtukuru1.image = UIImage(named: "red")
+        
+        //ボタンの画像の切り替え
+        self.blackButton.setImage(blackb, for: .normal)
+        self.whiteButton.setImage(whiteb, for: .normal)
+        self.redButton.setImage(redB, for: .normal)
         
         //tukuruViewControllerのプラスマイナスボタンのタグの番号をplusminustagに入れている。
         switch plusminustag {
@@ -275,6 +311,10 @@ class tukuru1ViewController: UIViewController {
         self.imageViewtukuru1.layer.borderColor = UIColor.blue.cgColor
         //線の太さ(太さ)
         self.imageViewtukuru1.layer.borderWidth = 3
+        
+        self.blackButton.setImage(blackb, for: .normal)
+        self.whiteButton.setImage(whiteb, for: .normal)
+        self.redButton.setImage(redb, for: .normal)
        
         
     }
