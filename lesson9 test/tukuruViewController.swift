@@ -9,17 +9,29 @@ import UIKit
 
 class tukuruViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
-    
     
     @IBOutlet weak var tukuimageView1: UIImageView!
     @IBOutlet weak var tukuimageView2: UIImageView!
     @IBOutlet weak var tukuimageView3: UIImageView!
+    @IBOutlet weak var tukuimageView4: UIImageView!
+    @IBOutlet weak var tukuimageView5: UIImageView!
+    @IBOutlet weak var tukuimageView6: UIImageView!
+    @IBOutlet weak var tukuimageView7: UIImageView!
+    @IBOutlet weak var tukuimageView8: UIImageView!
+    @IBOutlet weak var tukuimageView9: UIImageView!
     
     
     @IBOutlet weak var plusminus1: UIButton!
     @IBOutlet weak var plusminus2: UIButton!
     @IBOutlet weak var plusminus3: UIButton!
+    @IBOutlet weak var plusminus4: UIButton!
+    @IBOutlet weak var plusminus5: UIButton!
+    @IBOutlet weak var plusminus6: UIButton!
+    @IBOutlet weak var plusminus7: UIButton!
+    @IBOutlet weak var plusminus8: UIButton!
+    @IBOutlet weak var plusminus9: UIButton!
+    
+    
     
     @IBOutlet weak var kido1: UIButton!
     @IBOutlet weak var kido2: UIButton!
@@ -28,10 +40,25 @@ class tukuruViewController: UIViewController {
     var gazou1:Int = 0
     var gazou2:Int = 0
     var gazou3:Int = 0
+    var gazou4:Int = 0
+    var gazou5:Int = 0
+    var gazou6:Int = 0
+    var gazou7:Int = 0
+    var gazou8:Int = 0
+    var gazou9:Int = 0
+    
     
     var tagNumber1:Int = 0
     var tagNumber2:Int = 0
     var tagNumber3:Int = 0
+    var tagNumber4:Int = 0
+    var tagNumber5:Int = 0
+    var tagNumber6:Int = 0
+    var tagNumber7:Int = 0
+    var tagNumber8:Int = 0
+    var tagNumber9:Int = 0
+    
+    
     
     var checkButtonArray = [Int]()
     
@@ -45,7 +72,7 @@ class tukuruViewController: UIViewController {
         super.viewDidLoad()
         iroNumber1 = userDefaults.integer(forKey: "iro1")
         //      self.gazou1 = iroNumber1
-        label.text = "gazouは\(gazou1)"
+      
         print("gazou1は\(self.gazou1)")
         
         //画像１の枠線の変更
@@ -65,6 +92,43 @@ class tukuruViewController: UIViewController {
         self.tukuimageView3.layer.borderColor = UIColor.blue.cgColor
         //線の太さ(太さ)
         self.tukuimageView3.layer.borderWidth = 2
+        
+        //画像4の枠線の変更
+        //青にする(色)
+        self.tukuimageView4.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView4.layer.borderWidth = 2
+        
+        //画像5の枠線の変更
+        //青にする(色)
+        self.tukuimageView5.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView5.layer.borderWidth = 2
+        
+        //画像6の枠線の変更
+        //青にする(色)
+        self.tukuimageView6.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView6.layer.borderWidth = 2
+        
+        
+        //画像7の枠線の変更
+        //青にする(色)
+        self.tukuimageView7.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView7.layer.borderWidth = 2
+        
+        //画像8の枠線の変更
+        //青にする(色)
+        self.tukuimageView8.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView8.layer.borderWidth = 2
+        
+        //画像9の枠線の変更
+        //青にする(色)
+        self.tukuimageView9.layer.borderColor = UIColor.blue.cgColor
+        //線の太さ(太さ)
+        self.tukuimageView9.layer.borderWidth = 2
         
         
         
@@ -125,6 +189,111 @@ class tukuruViewController: UIViewController {
         print("プラスを押す前のtukuruのiroNumberは\(iroNumber3)")
         
         
+        //アプリを再起動してもiro4の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber4 = userDefaults.integer(forKey: "iro4")
+        self.gazou4 = iroNumber4
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber4 == 0{
+            //もし、iroNumber4が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus4.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus4.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber4)")
+        
+        
+        //アプリを再起動してもiro5の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber5 = userDefaults.integer(forKey: "iro5")
+        self.gazou5 = iroNumber5
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber5 == 0{
+            //もし、iroNumber5が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus5.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus5.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber5)")
+        
+        
+        //アプリを再起動してもiro6の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber6 = userDefaults.integer(forKey: "iro6")
+        self.gazou6 = iroNumber6
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber6 == 0{
+            //もし、iroNumber6が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus6.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus6.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber6)")
+        
+        
+        //アプリを再起動してもiro7の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber7 = userDefaults.integer(forKey: "iro7")
+        self.gazou7 = iroNumber7
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber7 == 0{
+            //もし、iroNumber7が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus7.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus7.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber7)")
+        
+        //アプリを再起動してもiro8の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber8 = userDefaults.integer(forKey: "iro8")
+        self.gazou8 = iroNumber8
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber8 == 0{
+            //もし、iroNumber8が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus8.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus8.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber8)")
+        
+        
+        //アプリを再起動してもiro9の色を表示する
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        iroNumber9 = userDefaults.integer(forKey: "iro9")
+        self.gazou9 = iroNumber9
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        if iroNumber9 == 0{
+            //もし、iroNumber9が0(「画像はありません」)ならボタンをプラスにする
+            self.plusminus9.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+        }
+        else{
+            //「画像がありません」以外ならボタンをマイナスにする
+            self.plusminus9.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
+        }
+        print("プラスを押す前のtukuruのiroNumberは\(iroNumber9)")
+        
+        
+        
+        
+        
+        
         switch iroNumber1 {
         case 1:
             tukuimageView1.image = UIImage(named: "black")
@@ -132,8 +301,24 @@ class tukuruViewController: UIViewController {
             tukuimageView1.image = UIImage(named: "white")
         case 3:
             tukuimageView1.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView1.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView1.image = UIImage(named: "green")
+        case 6:
+            tukuimageView1.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView1.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView1.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView1.image = UIImage(named: "purple")
+            
+
         default:
-            tukuimageView1.image = UIImage(named: "gazounashi")
+            tukuimageView1.image = UIImage(named: "purasudegazoutukutte")
         }
         
         
@@ -144,8 +329,23 @@ class tukuruViewController: UIViewController {
             tukuimageView2.image = UIImage(named: "white")
         case 3:
             tukuimageView2.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView2.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView2.image = UIImage(named: "green")
+        case 6:
+            tukuimageView2.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView2.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView2.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView2.image = UIImage(named: "purple")
+           
         default:
-            tukuimageView2.image = UIImage(named: "gazounashi")
+            tukuimageView2.image = UIImage(named: "purasudegazoutukutte")
         }
         
         switch iroNumber3 {
@@ -155,12 +355,181 @@ class tukuruViewController: UIViewController {
             tukuimageView3.image = UIImage(named: "white")
         case 3:
             tukuimageView3.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView3.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView3.image = UIImage(named: "green")
+        case 6:
+            tukuimageView3.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView3.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView3.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView3.image = UIImage(named: "purple")
+            
         default:
-            tukuimageView3.image = UIImage(named: "gazounashi")
+            tukuimageView3.image = UIImage(named: "purasudegazoutukutte")
+        }
+        
+        switch iroNumber4 {
+        case 1:
+            tukuimageView4.image = UIImage(named: "black")
+        case 2:
+            tukuimageView4.image = UIImage(named: "white")
+        case 3:
+            tukuimageView4.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView4.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView4.image = UIImage(named: "green")
+        case 6:
+            tukuimageView4.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView4.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView4.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView4.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView4.image = UIImage(named: "purasudegazoutukutte")
+        }
+        
+        switch iroNumber5 {
+        case 1:
+            tukuimageView5.image = UIImage(named: "black")
+        case 2:
+            tukuimageView5.image = UIImage(named: "white")
+        case 3:
+            tukuimageView5.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView5.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView5.image = UIImage(named: "green")
+        case 6:
+            tukuimageView5.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView5.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView5.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView5.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView5.image = UIImage(named: "purasudegazoutukutte")
         }
         
         
+        switch iroNumber6 {
+        case 1:
+            tukuimageView6.image = UIImage(named: "black")
+        case 2:
+            tukuimageView6.image = UIImage(named: "white")
+        case 3:
+            tukuimageView6.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView6.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView6.image = UIImage(named: "green")
+        case 6:
+            tukuimageView6.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView6.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView6.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView6.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView6.image = UIImage(named: "purasudegazoutukutte")
+        }
         
+        switch iroNumber7 {
+        case 1:
+            tukuimageView7.image = UIImage(named: "black")
+        case 2:
+            tukuimageView7.image = UIImage(named: "white")
+        case 3:
+            tukuimageView7.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView7.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView7.image = UIImage(named: "green")
+        case 6:
+            tukuimageView7.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView7.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView7.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView7.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView7.image = UIImage(named: "purasudegazoutukutte")
+        }
+        
+        switch iroNumber8 {
+        case 1:
+            tukuimageView8.image = UIImage(named: "black")
+        case 2:
+            tukuimageView8.image = UIImage(named: "white")
+        case 3:
+            tukuimageView8.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView8.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView8.image = UIImage(named: "green")
+        case 6:
+            tukuimageView8.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView8.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView8.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView8.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView8.image = UIImage(named: "purasudegazoutukutte")
+        }
+        
+        switch iroNumber9 {
+        case 1:
+            tukuimageView9.image = UIImage(named: "black")
+        case 2:
+            tukuimageView9.image = UIImage(named: "white")
+        case 3:
+            tukuimageView9.image = UIImage(named: "red")
+            
+        case 4:
+            tukuimageView9.image = UIImage(named: "blue")
+        case 5:
+            tukuimageView9.image = UIImage(named: "green")
+        case 6:
+            tukuimageView9.image = UIImage(named: "yellow")
+            
+        case 7:
+            tukuimageView9.image = UIImage(named: "pink")
+        case 8:
+            tukuimageView9.image = UIImage(named: "orange")
+        case 9:
+            tukuimageView9.image = UIImage(named: "purple")
+            
+        default:
+            tukuimageView9.image = UIImage(named: "purasudegazoutukutte")
+        }
         
     }
     
@@ -262,9 +631,7 @@ class tukuruViewController: UIViewController {
           
             }
             
-            
-            
-        default:
+        case 3:
             //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
             if iroNumber3 == 0 {
                 
@@ -311,6 +678,296 @@ class tukuruViewController: UIViewController {
             
                 
             }
+            
+            
+            
+        case 4:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber4 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus4.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber4 , forKey: "iro3")
+                
+                //       self.kido1.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido1.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber4 = 0
+                tukuimageView4.image = UIImage(named: "gazounashi")
+                self.plusminus4.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber4 , forKey: "iro4")
+               
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber4 = 0
+                userDefaults.set(tagNumber4 , forKey: "tagNumber4")
+                
+            
+                
+            }
+            
+            
+            
+            
+        case 5:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber5 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus5.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber5 , forKey: "iro5")
+                
+                //       self.kido.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber5 = 0
+                tukuimageView5.image = UIImage(named: "gazounashi")
+                self.plusminus5.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber5 , forKey: "iro5")
+                
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber5 = 0
+                userDefaults.set(tagNumber5 , forKey: "tagNumber5")
+                
+          
+            }
+            
+            
+        case 6:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber6 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus6.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber6 , forKey: "iro6")
+                
+                //       self.kido.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber6 = 0
+                tukuimageView6.image = UIImage(named: "gazounashi")
+                self.plusminus6.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber6 , forKey: "iro6")
+                
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber6 = 0
+                userDefaults.set(tagNumber6 , forKey: "tagNumber6")
+                
+          
+            }
+            
+            
+        case 7:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber7 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus7.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber7 , forKey: "iro7")
+                
+                //       self.kido.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber7 = 0
+                tukuimageView7.image = UIImage(named: "gazounashi")
+                self.plusminus7.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber7 , forKey: "iro7")
+                
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber7 = 0
+                userDefaults.set(tagNumber7 , forKey: "tagNumber7")
+                
+          
+            }
+            
+            
+        case 8:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber8 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus8.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber8 , forKey: "iro8")
+                
+                //       self.kido.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber8 = 0
+                tukuimageView8.image = UIImage(named: "gazounashi")
+                self.plusminus8.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber8 , forKey: "iro8")
+                
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber8 = 0
+                userDefaults.set(tagNumber8 , forKey: "tagNumber8")
+                
+          
+            }
+            
+            
+            
+        default:
+            //タッチするとプラスボタンがマイナスに、点灯した電球が消えた電球になる。
+            if iroNumber9 == 0 {
+                
+                //iroNumber が０（画像がない表示）なら、ボタンはプラスからマイナスに変更
+                self.plusminus9.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber9 , forKey: "iro9")
+                
+                //       self.kido1.setImage(UIImage(systemName: "lightbulb.slash"), for: .normal);
+                //        self.kido1.setImage(UIImage(systemName: "lightbulb.fill"), for: .selected)
+                
+                //画面遷移
+                // ①storyboardのインスタンス取得
+                let storyboard: UIStoryboard = self.storyboard!
+                
+                // ②遷移先ViewControllerのインスタンス取得
+                let nextView = storyboard.instantiateViewController(withIdentifier: "tukuru1ViewController") as! tukuru1ViewController
+                
+                
+                //tagの値をtukuru1ViewControllerに渡す
+                print("タグ\(sender.tag)")
+                nextView.plusminustag = sender.tag
+                
+                
+                // ③画面遷移
+                let vc = nextView
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                sender.isSelected = !sender.isSelected;
+                
+            }
+            //    self.present(nextView, animated: true, completion: nil)
+            else{
+                //画像があるなら、「画像がない」画像に変更し、ボタンはマイナスからプラスに変更
+                iroNumber9 = 0
+                tukuimageView9.image = UIImage(named: "gazounashi")
+                self.plusminus9.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal);
+                userDefaults.set(iroNumber9 , forKey: "iro9")
+               
+                //tagNumberを０にして記憶させる（zyunbanViewControllerで画像を表示させない番号。させるときは１にする）
+                self.tagNumber9 = 0
+                userDefaults.set(tagNumber9 , forKey: "tagNumber9")
+                
+            
+                
+            }
         }
         
     }
@@ -351,6 +1008,56 @@ class tukuruViewController: UIViewController {
             checkButtonArray += [0]
         }
         
+        if userDefaults.integer(forKey: "tagNumber4") == 4{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber4")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber5") == 5{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber5")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber6") == 6{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber6")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber7") == 7{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber7")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber8") == 8{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber8")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        if userDefaults.integer(forKey: "tagNumber9") == 9{
+            checkButtonArray += [userDefaults.integer(forKey: "tagNumber9")]
+        }
+
+        else {
+            checkButtonArray += [0]
+        }
+        
+        
+        
         //戻るを押した時に配列を記憶させる
         userDefaults.set(checkButtonArray , forKey: "checkButtonArray")
                          
@@ -370,6 +1077,15 @@ class tukuruViewController: UIViewController {
         View.ViewControllergazo1 = UserDefaults.standard.integer(forKey: "iro1")
         View.ViewControllergazo2 = UserDefaults.standard.integer(forKey: "iro2")
         View.ViewControllergazo3 = UserDefaults.standard.integer(forKey: "iro3")
+        
+        View.ViewControllergazo4 = UserDefaults.standard.integer(forKey: "iro4")
+        View.ViewControllergazo5 = UserDefaults.standard.integer(forKey: "iro5")
+        View.ViewControllergazo6 = UserDefaults.standard.integer(forKey: "iro6")
+        
+        View.ViewControllergazo7 = UserDefaults.standard.integer(forKey: "iro7")
+        View.ViewControllergazo8 = UserDefaults.standard.integer(forKey: "iro8")
+        View.ViewControllergazo9 = UserDefaults.standard.integer(forKey: "iro9")
+        
         
         let vc = View
         vc.modalPresentationStyle = .fullScreen

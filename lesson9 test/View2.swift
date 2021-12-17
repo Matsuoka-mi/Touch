@@ -7,7 +7,7 @@
 
 import UIKit
 
-class View2: UIViewController {
+class View2: UIViewController, UIGestureRecognizerDelegate {
     
     //forkey
     let userDefaults:UserDefaults = UserDefaults.standard
@@ -16,9 +16,24 @@ class View2: UIViewController {
 
     var view2gazo: Int = 0
     var view3gazo: Int = 0
+    var view4gazo: Int = 0
+    var view5gazo: Int = 0
+    var view6gazo: Int = 0
+    var view7gazo: Int = 0
+    var view8gazo: Int = 0
+    var view9gazo: Int = 0
 
     var kido2: Int = 0
     
+   
+    
+    ////////////////////////////////////
+    ///誤作動防止のため、２点タップしたら戻るようにする
+    ///classにUIGestureRecognizerDelegateを記入してから。
+    let modorutap = UserDefaults.standard.bool(forKey: "modoruTapkey")
+    var modoruButton1: Bool = false
+    var modoruButton2: Bool = false
+   
 
     @IBOutlet weak var image2View: UIImageView!
     
@@ -26,9 +41,37 @@ class View2: UIViewController {
     //TapGestureRecognizerのアイコンとソースコードをコントロールを押しながら接続し「Action」で名前をつけて下記のように記入すると、画像をタップで画面遷移できる。
     
     
+    
+    @IBAction func modoruButton1(_ sender: Any) {
+        modoruButton1 = true
+        print(modoruButton1)
+        print(modoruButton2)
+    }
+    @IBAction func modoruButton2(_ sender: Any) {
+        if modoruButton1 == true{
+            modoruButton2 = true
+            print(modoruButton1)
+            print(modoruButton2)
+            // ①storyboardのインスタンス取得
+                    let storyboard: UIStoryboard = self.storyboard!
+             
+                    // ②遷移先ViewControllerのインスタンス取得
+                    let nextView = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+             
+                    // ③画面遷移
+            let vc = nextView
+            vc.modalPresentationStyle = .fullScreen
+                    self.present(nextView, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
     @IBAction func Tap2(_ sender: Any) {
-        
+        modoruButton1 = false
+        modoruButton2 = false
        
+        
         //輝度//////////////////////////////////////////////輝度////////////////
         if kido2 == 1 {
         UIScreen.main.brightness = 1    //輝度１。明るい。
@@ -47,11 +90,23 @@ class View2: UIViewController {
             
             
                 //画面遷移////////////////////////////
-                let view3 = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
                        
-                view3.view3gazo = self.view3gazo
+          
+                nextView.view3gazo = self.view3gazo
+                nextView.view4gazo = self.view4gazo
+                nextView.view5gazo = self.view5gazo
+                nextView.view6gazo = self.view6gazo
+                nextView.view7gazo = self.view7gazo
+                nextView.view8gazo = self.view8gazo
+                nextView.view9gazo = self.view9gazo
+                
+                
+                
+                
+                
                          
-                         let vc = view3
+                         let vc = nextView
                          vc.modalPresentationStyle = .fullScreen
                          self.present(vc, animated: true, completion: nil)
                          
@@ -60,6 +115,136 @@ class View2: UIViewController {
                          //画面遷移////////////////////////////
                     break
                 }
+                
+                
+                else if checkNumber == 4{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View4") as! View4
+                       
+                    nextView.view4gazo = self.view4gazo
+                    nextView.view5gazo = self.view5gazo
+                    nextView.view6gazo = self.view6gazo
+                    nextView.view7gazo = self.view7gazo
+                    nextView.view8gazo = self.view8gazo
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+                
+                else if checkNumber == 5{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View5") as! View5
+                       
+                    nextView.view5gazo = self.view5gazo
+                    nextView.view6gazo = self.view6gazo
+                    nextView.view7gazo = self.view7gazo
+                    nextView.view8gazo = self.view8gazo
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+                
+                else if checkNumber == 6{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View6") as! View6
+                       
+                    nextView.view6gazo = self.view6gazo
+                    nextView.view7gazo = self.view7gazo
+                    nextView.view8gazo = self.view8gazo
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+
+                else if checkNumber == 7{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View7") as! View7
+                       
+                   
+                    nextView.view7gazo = self.view7gazo
+                    nextView.view8gazo = self.view8gazo
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+                
+                else if checkNumber == 8{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View8") as! View8
+                       
+                    
+                    nextView.view8gazo = self.view8gazo
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+                
+                else if checkNumber == 9{
+                      
+                //画面遷移////////////////////////////
+                let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View9") as! View9
+                       
+                   
+                    nextView.view9gazo = self.view9gazo
+                         
+                         let vc = nextView
+                         vc.modalPresentationStyle = .fullScreen
+                         self.present(vc, animated: true, completion: nil)
+                         
+                         //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                         
+                         //画面遷移////////////////////////////
+                    break
+                     }
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }
         }
     
@@ -68,6 +253,16 @@ class View2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        print("view2gazo\(view2gazo)")
+        print("view3gazo\(view3gazo)")
+        print("view4gazo\(view4gazo)")
+        print("view5gazo\(view5gazo)")
+        print("view6gazo\(view6gazo)")
+        print("view7gazo\(view7gazo)")
+        print("view8gazo\(view8gazo)")
+        print("view9gazo\(view9gazo)")
+        print("2ページ目の読み込み")
         
         if UserDefaults.standard.integer(forKey: "LED2") == 1
         {
@@ -93,6 +288,21 @@ class View2: UIViewController {
         case 3 :
             image2View.image = UIImage(named: "red")
             
+            
+        case 4:
+            image2View.image = UIImage(named: "blue")
+        case 5:
+            image2View.image = UIImage(named: "green")
+        case 6:
+            image2View.image = UIImage(named: "yellow")
+            
+        case 7:
+            image2View.image = UIImage(named: "pink")
+        case 8:
+            image2View.image = UIImage(named: "orange")
+        case 9:
+            image2View.image = UIImage(named: "purple")
+            
         default:
             image2View.image = UIImage(named: "gazounashi")
         
@@ -108,6 +318,38 @@ class View2: UIViewController {
                let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(redViewController.pinchView(sender:)))  //Swift3
                // viewにピンチを登録
                self.view.addGestureRecognizer(pinchGesture)
+        
+        
+        ////////////////////////////////////
+        ///////////////////////////////////////
+        ///////////////////////////////////////
+        //ここから、誤作動防止のためのコード
+        
+        //長押しインスタンスを生成する
+        let longPressGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(
+            target: self,
+            action: #selector(self.longPressAction(_:))
+        )
+        //デリゲートをセット
+        longPressGesture.delegate = self
+        //viewにlongPressGestureを追加
+        self.view.addGestureRecognizer(longPressGesture)
+        //長押しここまで
+        
+        
+        // ダブルタップジェスチャーの設定
+        // タップジェスチャーを作成します。
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
+        
+        // ダブルタップで反応するように設定します。
+        doubleTapGesture.numberOfTapsRequired = 2
+        
+        // ビューにジェスチャーを設定します。
+        self.view.addGestureRecognizer(doubleTapGesture)
+        
+        ////////////////////////////////////
+        //ここまで、誤作動防止のためのコード
+        
                
            }
            
@@ -125,7 +367,34 @@ class View2: UIViewController {
         
     }
     
+    ////////////////////////////////////
+    //ここから、誤作動防止のためのコード
     
+    //左上をタップした後に長押しをしたら、無効になり、右下をタップしても画面は戻らない
+    
+    @objc func longPressAction(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .ended {
+            //ここに、長押し終了時に実行したい処理を記載する
+            print("長押し")
+            modoruButton1 = false
+            modoruButton2 = false
+        }
+    }
+    
+    //左上をタップした後にダブルタップをしたら、無効になり、右下をタップしても画面は戻らない
+    @objc func doubleTap(_ gesture: UITapGestureRecognizer) {
+        // ダブルタップされた時の処理を記述してください。
+        print("ダブルタップ")
+        modoruButton1 = false
+        modoruButton2 = false
+    }
+    
+    
+
+    
+    /////////////////////////////////////
+    ///↑ここまでをコピーして他の画面にも貼り付ける
+    /////////////////////////////////////
     
     
     

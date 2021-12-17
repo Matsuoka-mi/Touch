@@ -16,13 +16,28 @@ class ViewController: UIViewController {
     var ViewControllergazo1: Int = 0
     var ViewControllergazo2: Int = 0
     var ViewControllergazo3: Int = 0
+    var ViewControllergazo4: Int = 0
+    var ViewControllergazo5: Int = 0
+    var ViewControllergazo6: Int = 0
+    var ViewControllergazo7: Int = 0
+    var ViewControllergazo8: Int = 0
+    var ViewControllergazo9: Int = 0
     
     var checkButtonArray = [Int]()
     
-    /////あとで消す
-    ///
-    @IBOutlet weak var imagetest: UIImageView!
-    /////あとで消す
+    //画面の明るさ取得
+    var currentBrightness: CGFloat = UIScreen.main.brightness
+         
+   
+    
+    //画面の戻り方案内画像
+    @IBOutlet weak var Touch: UIImageView!
+    @IBOutlet weak var Pinch: UIImageView!
+    
+
+    @IBOutlet weak var hazimeru: UIButton!
+    @IBOutlet weak var settei: UIButton!
+    @IBOutlet weak var tukuru: UIButton!
     
     
     @IBAction func hazimeru(_ sender: UIButton) {
@@ -33,6 +48,13 @@ class ViewController: UIViewController {
         FirstView.Firstgazo1 = UserDefaults.standard.integer(forKey: "iro1")
         FirstView.Firstgazo2 = UserDefaults.standard.integer(forKey: "iro2")
         FirstView.Firstgazo3 = UserDefaults.standard.integer(forKey: "iro3")
+        
+        FirstView.Firstgazo4 = UserDefaults.standard.integer(forKey: "iro4")
+        FirstView.Firstgazo5 = UserDefaults.standard.integer(forKey: "iro5")
+        FirstView.Firstgazo6 = UserDefaults.standard.integer(forKey: "iro6")
+        FirstView.Firstgazo7 = UserDefaults.standard.integer(forKey: "iro7")
+        FirstView.Firstgazo8 = UserDefaults.standard.integer(forKey: "iro8")
+        FirstView.Firstgazo9 = UserDefaults.standard.integer(forKey: "iro9")
         
        //インストール後すぐに「はじめる」を押した時
         let data = UserDefaults.standard.object(forKey: "checkButtonArray")
@@ -149,6 +171,13 @@ class ViewController: UIViewController {
         zyunView.gazouzyun1 = self.ViewControllergazo1
         zyunView.gazouzyun2 = self.ViewControllergazo2
         zyunView.gazouzyun3 = self.ViewControllergazo3
+        zyunView.gazouzyun4 = self.ViewControllergazo4
+        zyunView.gazouzyun5 = self.ViewControllergazo5
+        zyunView.gazouzyun6 = self.ViewControllergazo6
+        zyunView.gazouzyun7 = self.ViewControllergazo7
+        zyunView.gazouzyun8 = self.ViewControllergazo8
+        zyunView.gazouzyun9 = self.ViewControllergazo9
+        
         
         // 遷移方法にフルスクリーンを指定
         let vc = zyunView
@@ -219,8 +248,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        hazimeru.layer.cornerRadius = 20.0
+        settei.layer.cornerRadius = 20.0
+        tukuru.layer.cornerRadius = 20.0
         
-        UIScreen.main.brightness = 1    //輝度１。明るい。
+        Touch.image = UIImage(named: "Touch")
+        Pinch.image = UIImage(named: "Pinch")
+    
+        
+        
+        
+       
+            
+           
+        print("保存前のakarusa\(currentBrightness)")
+        UserDefaults.standard.set(currentBrightness, forKey: "bright")
+        //明るさを取得
+       let akarusa = userDefaults.object(forKey: "bright")
+        
+       // UIScreen.main.brightness = 1    //輝度１。明るい。
+        UIScreen.main.brightness = akarusa as! CGFloat   //輝度１。明るい。
+        print("akarusa\(akarusa)")
         
         print("はじめにの画面のtag1の明るさはLED1\(UserDefaults.standard.integer(forKey: "LED1"))")
         print("はじめにの画面のtag1の明るさはLED2\(UserDefaults.standard.integer(forKey: "LED2"))")
