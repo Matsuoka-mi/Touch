@@ -33,7 +33,8 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
     var modoruButton2: Bool = false
     let modorutap = UserDefaults.standard.bool(forKey: "modoruTapkey")
     
-    
+    //長押しもダブルタップもタップとして拾う
+    var Taplongdouble: Int = 0
     
     @IBOutlet weak var view1image: UIImageView!
     //imageViewの上にTapGestureRecognizerを追加。storyboardの一番左の黄色いまるからコントロールを押しながら移動したい画面へドラッグ。できた矢印をクリックした状態で右カラムのIdentifierに好きな名前をつける。
@@ -45,8 +46,17 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
     
     
     @IBAction func Tap1(_ sender: Any) {
-     
-        //誤作動防止　次は321行目
+    Taplongdouble = 3
+    }
+    
+    if Taplongdouble == 1 || Taplongdouble == 2 || Taplongdouble == 3{
+        print("論理和")
+
+      
+            print("論理和")
+        
+       
+        //誤作動防止　次は253行目
         modoruButton1 = false
         modoruButton2 = false
         
@@ -240,8 +250,8 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
             
             
         }
-        
     }
+    
     
     
     override func viewDidLoad() {
@@ -249,7 +259,7 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
         
         
         
-        
+        //誤作動防止　次は321行目
         let uiswitchONOFF = UserDefaults.standard.bool(forKey: "uiswitchkey")
         
         print(uiswitchONOFF)
@@ -376,6 +386,9 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
             print("長押し")
             modoruButton1 = false
             modoruButton2 = false
+            
+            Taplongdouble = 1
+            print(Taplongdouble)
         }
     }
     
@@ -385,6 +398,9 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
         print("ダブルタップ")
         modoruButton1 = false
         modoruButton2 = false
+        
+        Taplongdouble = 2
+        print(Taplongdouble)
     }
     
     
@@ -392,11 +408,11 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
     
     
     @IBAction func modoruButton1(_ sender: Any) {
-        print(modorutap)
+        print("modorutap\(modorutap)")
         if modorutap == true {
             modoruButton1 = true
-            print(modoruButton1)
-            print(modoruButton2)
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
         }
         
     }
@@ -405,8 +421,8 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
         
         if modoruButton1 == true{
             modoruButton2 = true
-            print(modoruButton1)
-            print(modoruButton2)
+            print("2が押された後のmodoruButton1\(modoruButton1)")
+            print("２が押された後のmodoruButton2\(modoruButton2)")
             // ①storyboardのインスタンス取得
             let storyboard: UIStoryboard = self.storyboard!
             
@@ -422,7 +438,7 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
     }
     
     /////////////////////////////////////
-    ///↑ここまでをコピーして他の画面にも貼り付ける
+    ///↑ここまでをコピーして他の画面にも貼り付ける 最後４３３行のif modorutap == false{ }
     /////////////////////////////////////
     
     /// ピンチイン・ピンチアウト時に実行される

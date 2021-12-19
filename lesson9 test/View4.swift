@@ -40,9 +40,11 @@ class View4: UIViewController, UIGestureRecognizerDelegate {
     
     
     @IBAction func modoruButton1(_ sender: Any) {
-        modoruButton1 = true
-        print(modoruButton1)
-        print(modoruButton2)
+        if modorutap == true {
+            modoruButton1 = true
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
+        }
     }
     @IBAction func modoruButton2(_ sender: Any) {
         if modoruButton1 == true{
@@ -340,6 +342,8 @@ class View4: UIViewController, UIGestureRecognizerDelegate {
                print("pinch")
                // ピンチイン・ピンチアウトの拡大縮小率
                print("scale: \(sender.scale)")
+      
+        if modorutap == false {
         // ①storyboardのインスタンス取得
                 let storyboard: UIStoryboard = self.storyboard!
          
@@ -354,6 +358,6 @@ vc.modalPresentationStyle = .fullScreen
        // 1秒あたりのピンチの速度(read-only)
        print("velocity: \(sender.velocity)")
    }
-
+    }
     
 }

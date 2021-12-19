@@ -84,6 +84,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTr-cQ-HiZ">
+                                <rect key="frame" x="457" y="604" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="ronriwa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K1l-pf-nae"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -621,10 +630,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSQ-XN-2OR">
-                                <rect key="frame" x="721" y="973.5" width="76" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="710" y="973.5" width="87" height="42"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="もどる"/>
+                                <state key="normal" title=" もどる ">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="zyunmodoru:" destination="N2C-Me-wU1" eventType="touchUpInside" id="T8S-9x-oGz"/>
                                 </connections>
@@ -1077,10 +1095,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-qd-9RB">
-                                <rect key="frame" x="721" y="942" width="76" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="710" y="942" width="87" height="42"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="もどる"/>
+                                <state key="normal" title=" もどる ">
+                                    <color key="titleShadowColor" red="0.99746066331863403" green="0.99762719869613647" blue="0.99743872880935669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="modoru:" destination="dEk-SD-zvb" eventType="touchUpInside" id="nHa-Bc-TcE"/>
                                 </connections>
@@ -1233,9 +1260,18 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-db-5bX">
                                 <rect key="frame" x="733" y="1023" width="76" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" red="0.99746066331863403" green="0.99762719869613647" blue="0.99743872880935669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="もどる"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" red="0.99746066331863403" green="0.99762719869613647" blue="0.99743872880935669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="modoru:" destination="yeW-3S-ts4" eventType="touchUpInside" id="YA4-UC-jHV"/>
                                 </connections>
@@ -1394,7 +1430,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-TZ-Brz">
-                                <rect key="frame" x="0.0" y="629.5" width="1024" height="107"/>
+                                <rect key="frame" x="0.0" y="629.5" width="302" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="28s-zZ-V0e"/>
                                     <constraint firstAttribute="width" constant="302" id="IBU-R0-rpm"/>
@@ -1409,23 +1445,21 @@
                                     <constraint firstAttribute="width" constant="70" id="BDN-Nk-ROp"/>
                                     <constraint firstAttribute="height" constant="70" id="f13-Ag-Xwh"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="9Ra-jB-hfR" eventType="touchUpInside" id="D88-cp-LMg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iQ-G4-9h9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-HL-Sfb">
                                 <rect key="frame" x="954" y="1296" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="BD0-6F-zo9"/>
-                                    <constraint firstAttribute="width" constant="70" id="CPl-PU-dqv"/>
+                                    <constraint firstAttribute="width" constant="70" id="rXM-uk-vMO"/>
+                                    <constraint firstAttribute="height" constant="70" id="tvE-Bp-gUG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="modoruButton1:" destination="9Ra-jB-hfR" eventType="touchUpInside" id="vra-H2-Ya7"/>
-                                    <action selector="modoruButton2:" destination="9Ra-jB-hfR" eventType="touchUpInside" id="6DM-A0-npE"/>
+                                    <action selector="modoruButton2:" destination="9Ra-jB-hfR" eventType="touchUpInside" id="wBW-FD-QjO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1433,10 +1467,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HUW-HL-Sfb" secondAttribute="trailing" id="8HB-9L-59F"/>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerY" secondItem="UE1-9j-uJU" secondAttribute="centerY" id="Fq0-Bc-Am0"/>
+                            <constraint firstAttribute="bottom" secondItem="HUW-HL-Sfb" secondAttribute="bottom" id="MBa-8K-yES"/>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="leading" secondItem="KfG-4n-XaM" secondAttribute="leading" id="MuB-We-6dz"/>
                             <constraint firstItem="qC8-TZ-Brz" firstAttribute="centerX" secondItem="UE1-9j-uJU" secondAttribute="centerX" id="igs-MN-Raw"/>
-                            <constraint firstItem="qC8-TZ-Brz" firstAttribute="trailing" secondItem="KfG-4n-XaM" secondAttribute="trailing" id="jds-6c-azu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="aR1-8s-pQn" appends="YES" id="Emm-NS-owj"/>
@@ -1454,7 +1489,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="737.41007194244605" y="73.920863309352526"/>
+            <point key="canvasLocation" x="737.109375" y="73.792093704245971"/>
         </scene>
         <!--1-->
         <scene sceneID="4LU-pP-MlN">
@@ -1477,8 +1512,7 @@
                                     <constraint firstAttribute="height" constant="70" id="7jv-UA-zCw"/>
                                     <constraint firstAttribute="width" constant="70" id="E9R-pl-q1e"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="qrF-Vk-Utr" eventType="touchUpInside" id="lHq-91-eIh"/>
                                 </connections>
@@ -1489,8 +1523,7 @@
                                     <constraint firstAttribute="height" constant="70" id="Kbq-t7-VNl"/>
                                     <constraint firstAttribute="width" constant="70" id="RtN-lk-Kur"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="qrF-Vk-Utr" eventType="touchUpInside" id="0rE-A5-lCK"/>
                                 </connections>
@@ -1545,8 +1578,7 @@
                                     <constraint firstAttribute="height" constant="70" id="KcZ-lk-ROE"/>
                                     <constraint firstAttribute="width" constant="70" id="jCN-wS-yJS"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="RbO-9L-5TA" eventType="touchUpInside" id="SGZ-Kn-LuV"/>
                                 </connections>
@@ -1557,8 +1589,7 @@
                                     <constraint firstAttribute="width" constant="70" id="4g6-z9-j4k"/>
                                     <constraint firstAttribute="height" constant="70" id="6sB-S4-gAh"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="RbO-9L-5TA" eventType="touchUpInside" id="tIs-f9-3K7"/>
                                 </connections>
@@ -1616,8 +1647,7 @@
                                     <constraint firstAttribute="height" constant="70" id="FSh-k5-mRK"/>
                                     <constraint firstAttribute="width" constant="70" id="hdJ-xb-GS0"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="fVU-VB-E2C" eventType="touchUpInside" id="6fA-7P-Z9a"/>
                                 </connections>
@@ -1628,8 +1658,7 @@
                                     <constraint firstAttribute="height" constant="70" id="ftu-Ih-2aT"/>
                                     <constraint firstAttribute="width" constant="70" id="zfj-Xl-AuR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="fVU-VB-E2C" eventType="touchUpInside" id="hcr-PB-i3s"/>
                                 </connections>
@@ -1684,8 +1713,7 @@
                                     <constraint firstAttribute="width" constant="70" id="Mqh-TR-EeZ"/>
                                     <constraint firstAttribute="height" constant="70" id="m2D-TN-Rkp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="AFB-bR-hYL" eventType="touchUpInside" id="wHq-aE-PDc"/>
                                 </connections>
@@ -1696,8 +1724,7 @@
                                     <constraint firstAttribute="height" constant="70" id="EfD-Nq-ysD"/>
                                     <constraint firstAttribute="width" constant="70" id="s0K-IN-jNo"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="AFB-bR-hYL" eventType="touchUpInside" id="YQi-sj-Mlm"/>
                                 </connections>
@@ -1750,8 +1777,7 @@
                                     <constraint firstAttribute="height" constant="70" id="ccN-6z-VHd"/>
                                     <constraint firstAttribute="width" constant="70" id="l74-hz-Fja"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="I85-Mq-LCD" eventType="touchUpInside" id="2II-n6-URh"/>
                                 </connections>
@@ -1762,8 +1788,7 @@
                                     <constraint firstAttribute="height" constant="70" id="0iY-10-9Zn"/>
                                     <constraint firstAttribute="width" constant="70" id="rfs-Zx-kRi"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="I85-Mq-LCD" eventType="touchUpInside" id="NWS-Zd-2Dl"/>
                                 </connections>
@@ -1816,8 +1841,7 @@
                                     <constraint firstAttribute="height" constant="70" id="9xp-lb-t2l"/>
                                     <constraint firstAttribute="width" constant="70" id="vQ8-Bu-fO6"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="liR-z7-w2m" eventType="touchUpInside" id="e9t-Cv-Bzo"/>
                                 </connections>
@@ -1828,8 +1852,7 @@
                                     <constraint firstAttribute="width" constant="70" id="eAX-4J-dRk"/>
                                     <constraint firstAttribute="height" constant="70" id="tYx-MJ-KMq"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="liR-z7-w2m" eventType="touchUpInside" id="6Wj-dN-Gt3"/>
                                 </connections>
@@ -1882,8 +1905,7 @@
                                     <constraint firstAttribute="width" constant="70" id="DC5-RG-h62"/>
                                     <constraint firstAttribute="height" constant="70" id="Ij6-A9-hkT"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="Frl-Zj-eQ5" eventType="touchUpInside" id="ERK-t2-KjW"/>
                                 </connections>
@@ -1894,8 +1916,7 @@
                                     <constraint firstAttribute="width" constant="70" id="7qK-LW-J8g"/>
                                     <constraint firstAttribute="height" constant="70" id="fll-6d-oXR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="Frl-Zj-eQ5" eventType="touchUpInside" id="48T-9g-uTO"/>
                                 </connections>
@@ -1948,8 +1969,7 @@
                                     <constraint firstAttribute="width" constant="70" id="dK7-v9-OE9"/>
                                     <constraint firstAttribute="height" constant="70" id="jxn-aP-9Fp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="Kuw-q5-d5Q" eventType="touchUpInside" id="ITZ-gm-cem"/>
                                 </connections>
@@ -1960,8 +1980,7 @@
                                     <constraint firstAttribute="height" constant="70" id="OJm-Gn-dJz"/>
                                     <constraint firstAttribute="width" constant="70" id="lOG-0j-l6Y"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="Kuw-q5-d5Q" eventType="touchUpInside" id="IOM-aY-Zzu"/>
                                 </connections>
@@ -2014,8 +2033,8 @@
                                     <constraint firstAttribute="height" constant="70" id="YS6-YO-0Ww"/>
                                     <constraint firstAttribute="width" constant="70" id="xd1-Yo-D5A"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="modoruButton2:" destination="JZY-ck-YxX" eventType="touchUpInside" id="NnK-qW-Sey"/>
                                 </connections>
@@ -2026,8 +2045,7 @@
                                     <constraint firstAttribute="width" constant="70" id="JZr-U2-Uwq"/>
                                     <constraint firstAttribute="height" constant="70" id="LWp-gP-Tea"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="modoruButton1:" destination="JZY-ck-YxX" eventType="touchUpInside" id="vjS-ct-eMl"/>
                                 </connections>
@@ -2058,6 +2076,30 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7484.7656249999991" y="55.783308931185942"/>
+        </scene>
+        <!--10-->
+        <scene sceneID="aUx-87-7KI">
+            <objects>
+                <viewController storyboardIdentifier="View10" title="10" id="jkt-30-e4d" customClass="View10" customModule="lesson9_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZZC-y0-IgP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAK-tO-nHk">
+                                <rect key="frame" x="431" y="618" width="32" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Zu-c0-Ar0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QZ-jF-HER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8243" y="58"/>
         </scene>
         <!--Last View Controller-->
         <scene sceneID="9HQ-sa-jQH">

@@ -24,10 +24,45 @@ class ViewController: UIViewController {
     var ViewControllergazo9: Int = 0
     
     var checkButtonArray = [Int]()
+   
     
-    //画面の明るさ取得
-    var currentBrightness: CGFloat = UIScreen.main.brightness
-         
+    /*   10へ           */
+    var test:Int = 0
+   
+    @IBAction func ronriwa(_ sender: Any) {
+        test = 2
+        if test == 1 || test == 2 || test == 3{
+            print("論理和")
+    }
+    }
+    
+//    @IBOutlet weak var button10: UIButton!
+    
+/*    @IBAction func button10(_ sender: Any) {
+        
+        //画面遷移////////////////////////////
+        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View10") as! View10
+               
+     
+                 
+                 let vc = nextView
+                 vc.modalPresentationStyle = .fullScreen
+                 self.present(vc, animated: true, completion: nil)
+                 
+                 //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                 
+                 //画面遷移////////////////////////////
+        
+    }
+ */
+    
+    /*   10へ ここまで          */
+    
+    
+    
+    
+    
+    
    
     
     //画面の戻り方案内画像
@@ -259,16 +294,11 @@ class ViewController: UIViewController {
         
         
        
-            
-           
-        print("保存前のakarusa\(currentBrightness)")
-        UserDefaults.standard.set(currentBrightness, forKey: "bright")
-        //明るさを取得
-       let akarusa = userDefaults.object(forKey: "bright")
+        /*画面の明るさ*/  /*画面の明るさ*/  /*画面の明るさ*/  /*画面の明るさ*/
         
-       // UIScreen.main.brightness = 1    //輝度１。明るい。
-        UIScreen.main.brightness = akarusa as! CGFloat   //輝度１。明るい。
-        print("akarusa\(akarusa)")
+       
+        UIScreen.main.brightness = 0.5    //輝度１。明るい。
+       
         
         print("はじめにの画面のtag1の明るさはLED1\(UserDefaults.standard.integer(forKey: "LED1"))")
         print("はじめにの画面のtag1の明るさはLED2\(UserDefaults.standard.integer(forKey: "LED2"))")
@@ -321,10 +351,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func unwind(_ segue: UIStoryboardSegue){
-        
-    }
-    
+   
     
     
 }

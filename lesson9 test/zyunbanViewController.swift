@@ -29,6 +29,7 @@ class zyunbanViewController: UIViewController {
     
     let picture0ON = UIImage(named: "kidoON")
     let picture1OFF = UIImage(named: "kidoOFF")
+//    var pictureNnumber: Int = 0
     
     let picturecheckON = UIImage(named: "checkON")
     let picturecheckOFF = UIImage(named: "checkOFF")
@@ -401,22 +402,39 @@ class zyunbanViewController: UIViewController {
     
     @IBAction func kidoView(_ sender: UIButton) {
         
+       
         switch sender.tag {
             
             //1番の画像のLEDボタンが押された時 Tag1
         case 1:
+             
+            print("if分の前。電球ボタンを押したときのLED1\(LED1)")
+            print("if分の前userDefaults\(userDefaults.integer(forKey: "LED1"))")
+            
+ //           LED1 = userDefaults.integer(forKey: "LED1")
+            
+            print("if分の前でLED1にDefaults入れた後のLED1\(LED1)")
             //LED1 == 0 は点灯しているので、消灯させる（輝度調整ありにする）
             if self.LED1 == 0{
                 self.LED1 = 1
+                
                 self.kidoView1.setImage(picture1OFF, for: .normal)
                 userDefaults.set(self.LED1 , forKey: "LED1")
+                print("点灯時ボタンを押したときのLED1（１で消灯）\(LED1)")
             }
             else{
                 //else は消灯している状態なので、０で点灯させ、　輝度調整しない状態へ変更
                 self.LED1 = 0
-                self.kidoView1.setImage(picture0ON, for: .normal)
+                
                 //点灯にする
+                
+                print("消灯時ボタンを押したときのLED1（１で消灯）\(LED1)")
+                
+                self.kidoView1.setImage(picture0ON, for: .normal)
+                
                 userDefaults.set(self.LED1 , forKey: "LED1")
+                print("消灯時ボタンを押したときのLED1 userDefaultsの方\(userDefaults.integer(forKey: "LED1"))")
+                
             }
             
             
@@ -554,6 +572,8 @@ class zyunbanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("設定のtag1の明るさはLED1\(UserDefaults.standard.integer(forKey: "LED1"))")
+        
         print("modoruTapは\(userDefaults.bool(forKey: "modoruTapkey"))")
         
       //  test.image = UIImage(named: "black")
@@ -579,15 +599,29 @@ class zyunbanViewController: UIViewController {
         checkView1.contentHorizontalAlignment = .fill
         checkView1.contentVerticalAlignment = .fill
         
+        LED1 = userDefaults.integer(forKey: "LED1")
+        LED2 = userDefaults.integer(forKey: "LED2")
+        LED3 = userDefaults.integer(forKey: "LED3")
+        LED4 = userDefaults.integer(forKey: "LED4")
+        LED5 = userDefaults.integer(forKey: "LED5")
+        LED6 = userDefaults.integer(forKey: "LED6")
+        LED7 = userDefaults.integer(forKey: "LED7")
+        LED8 = userDefaults.integer(forKey: "LED8")
+        LED9 = userDefaults.integer(forKey: "LED9")
+        
+        //LED1 == 0 は点灯している
+        print("読み込んだときのLED1（１で消灯）\(userDefaults.integer(forKey: "LED1"))")
         
         
         if userDefaults.integer(forKey: "LED1") == 0
         {
             self.kidoView1.setImage(picture0ON, for: .normal)
+            print("点灯時の読み込み。ライトがつく\(userDefaults.integer(forKey: "LED1"))")
         }
         else
         {
             self.kidoView1.setImage(picture1OFF, for: .normal)
+            print("消灯時の読み込み。ライトが消える\(userDefaults.integer(forKey: "LED1"))")
         }
         
         if userDefaults.integer(forKey: "LED2") == 0
@@ -1232,6 +1266,8 @@ class zyunbanViewController: UIViewController {
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             
         }
+        
+        print("viewWillAppear読み込み時\(userDefaults.integer(forKey: "LED1"))")
         
     }
     

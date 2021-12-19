@@ -34,9 +34,11 @@ class View3: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var image3View: UIImageView!
     
     @IBAction func modoruButton1(_ sender: Any) {
-        modoruButton1 = true
-        print(modoruButton1)
-        print(modoruButton2)
+        if modorutap == true {
+            modoruButton1 = true
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
+        }
     }
     
     @IBAction func modoruButton2(_ sender: Any) {
@@ -355,6 +357,9 @@ class View3: UIViewController, UIGestureRecognizerDelegate {
     
            /// ピンチイン・ピンチアウト時に実行される
     @objc func pinchView(sender: UIPinchGestureRecognizer) {
+       
+        
+        if modorutap == false {
         // ①storyboardのインスタンス取得
                 let storyboard: UIStoryboard = self.storyboard!
          
@@ -371,7 +376,7 @@ class View3: UIViewController, UIGestureRecognizerDelegate {
              
            }
     
-      
+    }
 
         // Do any additional setup after loading the view.
     }

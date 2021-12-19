@@ -43,9 +43,11 @@ class View2: UIViewController, UIGestureRecognizerDelegate {
     
     
     @IBAction func modoruButton1(_ sender: Any) {
-        modoruButton1 = true
-        print(modoruButton1)
-        print(modoruButton2)
+        if modorutap == true {
+            modoruButton1 = true
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
+        }
     }
     @IBAction func modoruButton2(_ sender: Any) {
         if modoruButton1 == true{
@@ -253,7 +255,9 @@ class View2: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        let uiswitchONOFF = UserDefaults.standard.bool(forKey: "uiswitchkey")
+        
+        
         print("view2gazo\(view2gazo)")
         print("view3gazo\(view3gazo)")
         print("view4gazo\(view4gazo)")
@@ -403,6 +407,9 @@ class View2: UIViewController, UIGestureRecognizerDelegate {
                print("pinch")
                // ピンチイン・ピンチアウトの拡大縮小率
                print("scale: \(sender.scale)")
+        
+        if modorutap == false {
+        
         // ①storyboardのインスタンス取得
                 let storyboard: UIStoryboard = self.storyboard!
          
@@ -418,7 +425,7 @@ vc.modalPresentationStyle = .fullScreen
        print("velocity: \(sender.velocity)")
    }
 
-    
+    }
     /*
     // MARK: - Navigation
 

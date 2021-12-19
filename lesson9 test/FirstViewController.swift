@@ -52,7 +52,8 @@ class FirstViewController: UIViewController, UIGestureRecognizerDelegate {
         
         
         let uiswitchONOFF = UserDefaults.standard.bool(forKey: "uiswitchkey")
-
+        print("uiswitchONOFF\(uiswitchONOFF)")
+        
         
         // ピンチを定義
         //let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(PinchCodeViewController.pinchView(_:)))  //Swift2.2以前
@@ -168,19 +169,21 @@ class FirstViewController: UIViewController, UIGestureRecognizerDelegate {
         print(modorutap)
         if modorutap == true {
             modoruButton1 = true
-            print(modoruButton1)
-            print(modoruButton2)
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
         }
         
     }
+    
+    
     
     @IBAction func modoruButton2(_ sender: Any) {
     
         
         if modoruButton1 == true{
             modoruButton2 = true
-            print(modoruButton1)
-            print(modoruButton2)
+            print("2が押された後のmodoruButton1\(modoruButton1)")
+            print("２が押された後のmodoruButton2\(modoruButton2)")
             // ①storyboardのインスタンス取得
             let storyboard: UIStoryboard = self.storyboard!
             
@@ -500,6 +503,7 @@ class FirstViewController: UIViewController, UIGestureRecognizerDelegate {
         print("pinch")
         // ピンチイン・ピンチアウトの拡大縮小率
         print("scale: \(sender.scale)")
+        if modorutap == false {
         // ①storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         
@@ -515,7 +519,7 @@ class FirstViewController: UIViewController, UIGestureRecognizerDelegate {
         print("velocity: \(sender.velocity)")
     }
     
-    
+    }
     
     
     

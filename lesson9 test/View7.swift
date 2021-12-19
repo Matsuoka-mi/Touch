@@ -37,9 +37,11 @@ class View7: UIViewController, UIGestureRecognizerDelegate {
     //TapGestureRecognizerのアイコンとソースコードをコントロールを押しながら接続し「Action」で名前をつけて下記のように記入すると、画像をタップで画面遷移できる。
     
     @IBAction func modoruButton1(_ sender: Any) {
-        modoruButton1 = true
-        print(modoruButton1)
-        print(modoruButton2)
+        if modorutap == true {
+            modoruButton1 = true
+            print("1が押された後のmodoruButton1\(modoruButton1)")
+            print("1が押された後のmodoruButton2\(modoruButton2)")
+        }
     }
     
     @IBAction func modoruButton2(_ sender: Any) {
@@ -259,6 +261,8 @@ class View7: UIViewController, UIGestureRecognizerDelegate {
                print("pinch")
                // ピンチイン・ピンチアウトの拡大縮小率
                print("scale: \(sender.scale)")
+       
+        if modorutap == false {
         // ①storyboardのインスタンス取得
                 let storyboard: UIStoryboard = self.storyboard!
          
@@ -274,5 +278,5 @@ vc.modalPresentationStyle = .fullScreen
        print("velocity: \(sender.velocity)")
    }
 
-
+    }
 }

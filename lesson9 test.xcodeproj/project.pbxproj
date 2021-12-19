@@ -18,6 +18,7 @@
 		BD378FFD275774090044EDB5 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD378FFC275774090044EDB5 /* View1.swift */; };
 		BD378FFF275777560044EDB5 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD378FFE275777560044EDB5 /* View2.swift */; };
 		BD379002275778370044EDB5 /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD379001275778370044EDB5 /* View3.swift */; };
+		BD532336276EFA7100067FB9 /* View10.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD532335276EFA7100067FB9 /* View10.swift */; };
 		BD6BE65227550CE7003FAA13 /* plusminus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6BE65127550CE7003FAA13 /* plusminus.swift */; };
 		BD7EA38D275396A2009442F0 /* kido.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7EA38C275396A2009442F0 /* kido.swift */; };
 		BDB6A18B274C975A00E8EFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6A18A274C975A00E8EFC3 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		BD378FFC275774090044EDB5 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		BD378FFE275777560044EDB5 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		BD379001275778370044EDB5 /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
+		BD532335276EFA7100067FB9 /* View10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View10.swift; sourceTree = "<group>"; };
 		BD6BE65127550CE7003FAA13 /* plusminus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plusminus.swift; sourceTree = "<group>"; };
 		BD7EA38C275396A2009442F0 /* kido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kido.swift; sourceTree = "<group>"; };
 		BDB6A187274C975A00E8EFC3 /* lesson9 test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lesson9 test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				BDF89740274E795C00A05409 /* CheckBox.swift */,
 				BD7EA38C275396A2009442F0 /* kido.swift */,
 				BD6BE65127550CE7003FAA13 /* plusminus.swift */,
+				BD532335276EFA7100067FB9 /* View10.swift */,
 				BDB6A1A6274CC71400E8EFC3 /* FirstViewController.swift */,
 				BD334593275B78B700C69F59 /* LastViewController.swift */,
 				BDB6A1CA274CEB4E00E8EFC3 /* zyunbanViewController.swift */,
@@ -216,6 +219,7 @@
 				BD378FFF275777560044EDB5 /* View2.swift in Sources */,
 				BD23D34B2765A92C0044E663 /* View4.swift in Sources */,
 				BDB6A1CD274CED2C00E8EFC3 /* tukuruViewController.swift in Sources */,
+				BD532336276EFA7100067FB9 /* View10.swift in Sources */,
 				BD6BE65227550CE7003FAA13 /* plusminus.swift in Sources */,
 				BDB6A18D274C975A00E8EFC3 /* SceneDelegate.swift in Sources */,
 				BDB6A1A9274CD80600E8EFC3 /* greenViewController.swift in Sources */,
