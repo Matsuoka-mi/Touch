@@ -46,212 +46,206 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
     
     
     @IBAction func Tap1(_ sender: Any) {
-    Taplongdouble = 3
-    }
-    
-    if Taplongdouble == 1 || Taplongdouble == 2 || Taplongdouble == 3{
-        print("論理和")
-
-      
-            print("論理和")
-        
-       
-        //誤作動防止　次は253行目
-        modoruButton1 = false
-        modoruButton2 = false
-        
-        //輝度//////////////////////////////////////////////輝度////////////////
-        if kido1 == 1 {
-            UIScreen.main.brightness = 1    //輝度１。明るい。
-            kido1 = 0
+           
+            //誤作動防止　次は253行目
+            modoruButton1 = false
+            modoruButton2 = false
             
-        }
-        else{
-            
-            let data = UserDefaults.standard.object(forKey: "checkButtonArray")
-            checkButtonArray = data as! [Int]
-            /*          受け取った配列                */
-            for checkNumber in checkButtonArray {
-                print("タップ時のcheckButtonArray for文\(checkNumber)")
-                if checkNumber == 2{
-                    
-                    // ①storyboardのインスタンス取得
-                    let storyboard: UIStoryboard = self.storyboard!
-                    
-                    // ②遷移先ViewControllerのインスタンス取得
-                    let nextView = storyboard.instantiateViewController(withIdentifier: "View2") as! View2
-                    
-                    nextView.view2gazo = self.view2gazo
-                    nextView.view3gazo = self.view3gazo
-                    nextView.view4gazo = self.view4gazo
-                    nextView.view5gazo = self.view5gazo
-                    nextView.view6gazo = self.view6gazo
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    
-                    // ③画面遷移
-                    
-                    // 遷移方法にフルスクリーンを指定
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    //self.present(nextView, animated: true, completion: nil)
-                    
-                    break
-                }
-                
-                else if checkNumber == 3{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
-                    
-                    
-                    nextView.view3gazo = self.view3gazo
-                    nextView.view4gazo = self.view4gazo
-                    nextView.view5gazo = self.view5gazo
-                    nextView.view6gazo = self.view6gazo
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 4{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View4") as! View4
-                    
-                    nextView.view4gazo = self.view4gazo
-                    nextView.view5gazo = self.view5gazo
-                    nextView.view6gazo = self.view6gazo
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 5{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View5") as! View5
-                    
-                    nextView.view5gazo = self.view5gazo
-                    nextView.view6gazo = self.view6gazo
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 6{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View6") as! View6
-                    
-                    nextView.view6gazo = self.view6gazo
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 7{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View7") as! View7
-                    
-                    
-                    nextView.view7gazo = self.view7gazo
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 8{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View8") as! View8
-                    
-                    
-                    nextView.view8gazo = self.view8gazo
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
-                
-                else if checkNumber == 9{
-                    
-                    //画面遷移////////////////////////////
-                    let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View9") as! View9
-                    
-                    
-                    nextView.view9gazo = self.view9gazo
-                    
-                    let vc = nextView
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    
-                    //           self.present(redView, animated: true, completion: nil)    //遷移の実行
-                    
-                    //画面遷移////////////////////////////
-                    break
-                }
+            //輝度//////////////////////////////////////////////輝度////////////////
+            if kido1 == 1 {
+                UIScreen.main.brightness = 1    //輝度１。明るい。
+                kido1 = 0
                 
             }
-            
-            
-        }
+            else{
+                
+                let data = UserDefaults.standard.object(forKey: "checkButtonArray")
+                checkButtonArray = data as! [Int]
+                /*          受け取った配列                */
+                for checkNumber in checkButtonArray {
+                    print("タップ時のcheckButtonArray for文\(checkNumber)")
+                    if checkNumber == 2{
+                        
+                        // ①storyboardのインスタンス取得
+                        let storyboard: UIStoryboard = self.storyboard!
+                        
+                        // ②遷移先ViewControllerのインスタンス取得
+                        let nextView = storyboard.instantiateViewController(withIdentifier: "View2") as! View2
+                        
+                        nextView.view2gazo = self.view2gazo
+                        nextView.view3gazo = self.view3gazo
+                        nextView.view4gazo = self.view4gazo
+                        nextView.view5gazo = self.view5gazo
+                        nextView.view6gazo = self.view6gazo
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        
+                        // ③画面遷移
+                        
+                        // 遷移方法にフルスクリーンを指定
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        //self.present(nextView, animated: true, completion: nil)
+                        
+                        break
+                    }
+                    
+                    else if checkNumber == 3{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View3") as! View3
+                        
+                        
+                        nextView.view3gazo = self.view3gazo
+                        nextView.view4gazo = self.view4gazo
+                        nextView.view5gazo = self.view5gazo
+                        nextView.view6gazo = self.view6gazo
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 4{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View4") as! View4
+                        
+                        nextView.view4gazo = self.view4gazo
+                        nextView.view5gazo = self.view5gazo
+                        nextView.view6gazo = self.view6gazo
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 5{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View5") as! View5
+                        
+                        nextView.view5gazo = self.view5gazo
+                        nextView.view6gazo = self.view6gazo
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 6{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View6") as! View6
+                        
+                        nextView.view6gazo = self.view6gazo
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 7{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View7") as! View7
+                        
+                        
+                        nextView.view7gazo = self.view7gazo
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 8{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View8") as! View8
+                        
+                        
+                        nextView.view8gazo = self.view8gazo
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                    else if checkNumber == 9{
+                        
+                        //画面遷移////////////////////////////
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "View9") as! View9
+                        
+                        
+                        nextView.view9gazo = self.view9gazo
+                        
+                        let vc = nextView
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                        
+                        //           self.present(redView, animated: true, completion: nil)    //遷移の実行
+                        
+                        //画面遷移////////////////////////////
+                        break
+                    }
+                    
+                }
+                
+                
+            }
+        
+        
     }
     
+ 
     
     
     override func viewDidLoad() {
@@ -401,6 +395,8 @@ class View1: UIViewController, UIGestureRecognizerDelegate {
         
         Taplongdouble = 2
         print(Taplongdouble)
+        
+        
     }
     
     
